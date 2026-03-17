@@ -10,33 +10,115 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RoundBoxIndexRouteImport } from './routes/round-box.index'
+import { Route as ModalIndexRouteImport } from './routes/modal.index'
+import { Route as LocalAutoCompleteIndexRouteImport } from './routes/local-auto-complete.index'
+import { Route as FlexOneContainerIndexRouteImport } from './routes/flex-one-container.index'
+import { Route as ContainerIndexRouteImport } from './routes/container.index'
+import { Route as ButtonIndexRouteImport } from './routes/button.index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RoundBoxIndexRoute = RoundBoxIndexRouteImport.update({
+  id: '/round-box/',
+  path: '/round-box/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModalIndexRoute = ModalIndexRouteImport.update({
+  id: '/modal/',
+  path: '/modal/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocalAutoCompleteIndexRoute = LocalAutoCompleteIndexRouteImport.update({
+  id: '/local-auto-complete/',
+  path: '/local-auto-complete/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlexOneContainerIndexRoute = FlexOneContainerIndexRouteImport.update({
+  id: '/flex-one-container/',
+  path: '/flex-one-container/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContainerIndexRoute = ContainerIndexRouteImport.update({
+  id: '/container/',
+  path: '/container/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ButtonIndexRoute = ButtonIndexRouteImport.update({
+  id: '/button/',
+  path: '/button/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/button/': typeof ButtonIndexRoute
+  '/container/': typeof ContainerIndexRoute
+  '/flex-one-container/': typeof FlexOneContainerIndexRoute
+  '/local-auto-complete/': typeof LocalAutoCompleteIndexRoute
+  '/modal/': typeof ModalIndexRoute
+  '/round-box/': typeof RoundBoxIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/button': typeof ButtonIndexRoute
+  '/container': typeof ContainerIndexRoute
+  '/flex-one-container': typeof FlexOneContainerIndexRoute
+  '/local-auto-complete': typeof LocalAutoCompleteIndexRoute
+  '/modal': typeof ModalIndexRoute
+  '/round-box': typeof RoundBoxIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/button/': typeof ButtonIndexRoute
+  '/container/': typeof ContainerIndexRoute
+  '/flex-one-container/': typeof FlexOneContainerIndexRoute
+  '/local-auto-complete/': typeof LocalAutoCompleteIndexRoute
+  '/modal/': typeof ModalIndexRoute
+  '/round-box/': typeof RoundBoxIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/button/'
+    | '/container/'
+    | '/flex-one-container/'
+    | '/local-auto-complete/'
+    | '/modal/'
+    | '/round-box/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/button'
+    | '/container'
+    | '/flex-one-container'
+    | '/local-auto-complete'
+    | '/modal'
+    | '/round-box'
+  id:
+    | '__root__'
+    | '/'
+    | '/button/'
+    | '/container/'
+    | '/flex-one-container/'
+    | '/local-auto-complete/'
+    | '/modal/'
+    | '/round-box/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ButtonIndexRoute: typeof ButtonIndexRoute
+  ContainerIndexRoute: typeof ContainerIndexRoute
+  FlexOneContainerIndexRoute: typeof FlexOneContainerIndexRoute
+  LocalAutoCompleteIndexRoute: typeof LocalAutoCompleteIndexRoute
+  ModalIndexRoute: typeof ModalIndexRoute
+  RoundBoxIndexRoute: typeof RoundBoxIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +130,59 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/round-box/': {
+      id: '/round-box/'
+      path: '/round-box'
+      fullPath: '/round-box/'
+      preLoaderRoute: typeof RoundBoxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modal/': {
+      id: '/modal/'
+      path: '/modal'
+      fullPath: '/modal/'
+      preLoaderRoute: typeof ModalIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/local-auto-complete/': {
+      id: '/local-auto-complete/'
+      path: '/local-auto-complete'
+      fullPath: '/local-auto-complete/'
+      preLoaderRoute: typeof LocalAutoCompleteIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flex-one-container/': {
+      id: '/flex-one-container/'
+      path: '/flex-one-container'
+      fullPath: '/flex-one-container/'
+      preLoaderRoute: typeof FlexOneContainerIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/container/': {
+      id: '/container/'
+      path: '/container'
+      fullPath: '/container/'
+      preLoaderRoute: typeof ContainerIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/button/': {
+      id: '/button/'
+      path: '/button'
+      fullPath: '/button/'
+      preLoaderRoute: typeof ButtonIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ButtonIndexRoute: ButtonIndexRoute,
+  ContainerIndexRoute: ContainerIndexRoute,
+  FlexOneContainerIndexRoute: FlexOneContainerIndexRoute,
+  LocalAutoCompleteIndexRoute: LocalAutoCompleteIndexRoute,
+  ModalIndexRoute: ModalIndexRoute,
+  RoundBoxIndexRoute: RoundBoxIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

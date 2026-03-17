@@ -7,7 +7,7 @@
         "generate-routes": "tsr generate",
         "watch-routes": "tsr watch",
         "dev": "bun generate-routes && bun --hot src/index.ts",
-        "build": "bun generate-routes && bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+        "build": "bun generate-routes && bun run build.ts",
         "start": "NODE_ENV=production bun src/index.ts",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
@@ -20,6 +20,7 @@
         "@tanstack/react-router": "^1.167.3",
         "@tanstack/react-router-devtools": "^1.166.9",
         "@tanstack/react-table": "^8.21.3",
+        "bun-plugin-tailwind": "^0.1.2",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "korean-regexp": "^1.0.13",
@@ -28,6 +29,7 @@
         "react": "^19",
         "react-dom": "^19",
         "react-use-measure": "^2.1.7",
+        "tailwindcss": "^4.2.1",
         "zustand": "^5.0.12"
     },
     "devDependencies": {

@@ -1,9 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
+import RoundBoxPage from "@/pages/round-box/page"
+import { createFileRoute } from "@tanstack/react-router"
 
-export const Route = createFileRoute('/round-box/')({
-  component: RouteComponent,
+export const Route = createFileRoute("/round-box/")({
+    component: RoundBoxPage,
 })
-
-function RouteComponent() {
-  return <div>Hello "/round-box/"!</div>
-}

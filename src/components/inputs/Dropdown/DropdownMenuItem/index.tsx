@@ -1,5 +1,5 @@
 import { type ReactNode } from "react"
-import Button from "../../Button/Button"
+import Button from "../../Button"
 import useDropdownStore from "../useDropdownStore"
 
 type DropdownMenuItemProps = {

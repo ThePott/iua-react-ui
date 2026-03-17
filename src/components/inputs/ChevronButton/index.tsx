@@ -1,7 +1,7 @@
 import { motionTransition } from "@/shared/utils/framerMotionAnimations"
 import { ChevronRight } from "lucide-react"
 import { motion } from "motion/react"
-import Button from "../Button/Button"
+import Button from "../Button"
 
 type ChevronButtonProps = {
     isOpened: boolean

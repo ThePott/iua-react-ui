@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Select from "./Select"
+import Select from "."
 
 const HowToUseSelect = () => {
     // TODO: CHANGE HERE TO GENERIC I GUESS????

@@ -1,9 +1,12 @@
+import { Hstack } from "@/components/layouts"
 import { buttonColorToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
-import type { ButtonBorder, ButtonColor } from "./buttonInterfaces"
-import { Hstack } from "@/components/layouts"
+import { Loader } from "../../pending/"
+
+const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
+type ButtonColor = (typeof buttonColorArray)[number]
 
 const buttonVariants = cva("rounded-my-sm my-transition", {
     variants: {
@@ -53,11 +56,11 @@ const buttonVariants = cva("rounded-my-sm my-transition", {
     ],
 })
 
-type WithButtonProps<T extends ElementType = "button"> = {
+interface WithButtonProps<T extends ElementType = "button"> {
     as?: T
     color?: ButtonColor
     status?: "enabled" | "disabled" | "pending"
-    border?: ButtonBorder
+    border?: "onHover" | "always" | "none"
     padding?: "wide" | "tight" | "normal" | "none"
     isShadowed?: boolean
     isOnLeft?: boolean

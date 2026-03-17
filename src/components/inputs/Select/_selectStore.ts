@@ -1,7 +1,7 @@
 import createLocalStore from "@/shared/store/createLocalStore"
 import type { useFloating } from "@floating-ui/react"
 import type { RefObject } from "react"
-import type { WithSelectProps } from "./Select"
+import type { WithSelectProps } from "."
 
 export type SelectPassedProps = WithSelectProps & {
     triggerRef: RefObject<HTMLButtonElement | null>

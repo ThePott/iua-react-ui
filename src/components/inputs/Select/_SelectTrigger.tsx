@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import Button from "../Button/Button"
+import Button from "../Button"
 import { useSelectStore } from "./_selectStore"
 
 interface SelectTriggerProps {

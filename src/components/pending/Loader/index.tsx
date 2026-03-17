@@ -1,9 +1,9 @@
 import type { XsToXl } from "@/shared/interfaces"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
-import styles from "./Loader.module.css"
+import styles from "./index.module.css"
 
-interface LoaderProps {
+type LoaderProps = {
     size?: XsToXl
     isDark?: boolean
 }

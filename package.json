@@ -18,15 +18,13 @@
         "@tanstack/react-router": "^1.167.3",
         "@tanstack/react-router-devtools": "^1.166.9",
         "react": "^19",
-        "react-dom": "^19",
-        "yargs": "^18.0.0"
+        "react-dom": "^19"
     },
     "devDependencies": {
         "@tanstack/router-cli": "^1.166.11",
         "@types/bun": "latest",
         "@types/react": "^19",
         "@types/react-dom": "^19",
-        "@types/yargs": "^17.0.35",
         "oxfmt": "^0.41.0",
         "oxlint": "^1.56.0"
     }

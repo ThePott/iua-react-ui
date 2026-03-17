@@ -1,0 +1,11 @@
+{
+    "ignorePatterns": [
+        "dist/**",
+        "*.min.js",
+        "routeTree.gen.ts",
+        "package.json",
+        "package-lock.json",
+        ".husky",
+        "**/*.gen.ts"
+    ]
+}

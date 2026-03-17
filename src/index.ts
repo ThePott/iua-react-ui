@@ -1,8 +1,5 @@
 import { serve } from "bun"
 import index from "./index.html"
-import yargs from "yargs"
-
-const yargsInstance = yargs.default()
 
 const server = serve({
     port: process.env.PORT || 3300,

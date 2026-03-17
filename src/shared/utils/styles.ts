@@ -1,5 +1,4 @@
-import { type ButtonColor, buttonColorArray } from "@/components/Button/buttonInterfaces"
-import type { Color, None, XsToXl } from "../interfaces"
+import type { XsToXl, None, Color } from "../types"
 import { squashObject } from "./squashObject"
 
 export const gapToCn: Record<XsToXl | None, string> = {
@@ -20,19 +19,16 @@ export const paddingToCn: Record<XsToXl | None, string> = {
     xl: "p-my-xl",
 }
 
-export const boxColorToCn: Record<Color, string> = {
+export const bgColorToCn: Record<Color, string> = {
     bgNeg1: "bg-bg-neg-1",
     bg0: "bg-bg-0",
     bg1: "bg-bg-1",
     bg2: "bg-bg-2",
-    bg3: "bg-bg-3",
     red: "bg-washed-red",
+    yellow: "",
     blue: "bg-washed-blue",
     green: "bg-washed-green",
-    darkRed: "bg-dark-red",
-    darkBlue: "bg-dark-blue",
-    darkYellow: "bg-dark-yellow",
-    black: "bg-wahsed-black",
+    transparent: "",
 }
 
 export const buttonColorToTextCn: Record<ButtonColor, string> = {

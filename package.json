@@ -4,8 +4,10 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "bun --hot src/index.ts",
-        "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+        "generate-routes": "tsr generate",
+        "watch-routes": "tsr watch",
+        "dev": "bun generate-routes && bun --hot src/index.ts",
+        "build": "bun generate-routes && bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
         "start": "NODE_ENV=production bun src/index.ts",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
@@ -13,14 +15,18 @@
         "fmt:check": "oxfmt --check"
     },
     "dependencies": {
-        "@tanstack/react-router": "^1.167.0",
+        "@tanstack/react-router": "^1.167.3",
+        "@tanstack/react-router-devtools": "^1.166.9",
         "react": "^19",
-        "react-dom": "^19"
+        "react-dom": "^19",
+        "yargs": "^18.0.0"
     },
     "devDependencies": {
+        "@tanstack/router-cli": "^1.166.11",
         "@types/bun": "latest",
         "@types/react": "^19",
         "@types/react-dom": "^19",
+        "@types/yargs": "^17.0.35",
         "oxfmt": "^0.41.0",
         "oxlint": "^1.56.0"
     }

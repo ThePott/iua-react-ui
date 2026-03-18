@@ -9,8 +9,10 @@ const RoundBoxPage = () => {
                 <Vstack gap="xl">
                     <Title as="h1">RoundBox</Title>
                     <Vstack>
-                        <Title as="h1">bg</Title>
-                        <Hstack>
+                        <Title as="h1" isMuted>
+                            bg
+                        </Title>
+                        <Hstack className="flex-wrap">
                             <RoundBox padding="lg" color="bgNeg1">
                                 bg-neg-1
                             </RoundBox>
@@ -26,7 +28,9 @@ const RoundBoxPage = () => {
                         </Hstack>
                     </Vstack>
                     <Vstack>
-                        <Title as="h1">colors</Title>
+                        <Title as="h1" isMuted>
+                            colors
+                        </Title>
                         <Hstack>
                             <RoundBox padding="lg" color="red" className="text-iua-fg-inverted-vivid">
                                 red
@@ -43,7 +47,9 @@ const RoundBoxPage = () => {
                         </Hstack>
                     </Vstack>
                     <Vstack>
-                        <Title as="h1">borders</Title>
+                        <Title as="h1" isMuted>
+                            borders
+                        </Title>
                         <Hstack>
                             <RoundBox padding="lg" color="bg2" isBordered>
                                 bordered
@@ -54,7 +60,9 @@ const RoundBoxPage = () => {
                         </Hstack>
                     </Vstack>
                     <Vstack>
-                        <Title as="h1">shadowed</Title>
+                        <Title as="h1" isMuted>
+                            shadowed
+                        </Title>
                         <Hstack>
                             <RoundBox padding="lg" color="bg2" isShadowed radius="sm">
                                 shadowed with radius sm

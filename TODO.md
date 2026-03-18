@@ -1,1 +1,3 @@
-- [ ] my classname 을 iua로 바꾸기
+- [x] my classname 을 iua로 바꾸기
+- [x] hard code style로 페이지 만들기
+- [ ] theme provider 이용해서 ghostty, rose pine 바꿔보기

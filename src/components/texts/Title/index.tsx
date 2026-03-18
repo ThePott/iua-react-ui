@@ -1,9 +1,10 @@
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import { tv } from "tailwind-variants/lite"
 
 import type { HeadingProps } from "@/shared/types"
 
-const titleVariants = cva("font-semibold", {
+const titleVariants = tv({
+    base: "font-semibold",
     variants: {
         size: {
             md: "",
@@ -12,7 +13,7 @@ const titleVariants = cva("font-semibold", {
         },
         isMuted: {
             false: "",
-            true: "text-fg-muted",
+            true: "text-iua-fg-muted",
         },
     },
 })

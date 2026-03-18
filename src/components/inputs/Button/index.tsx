@@ -1,16 +1,18 @@
-import { Hstack } from "@/components/layouts"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
+
+import { Hstack } from "@/components/layouts"
+import { bgVariants } from "@/shared/utils/styles"
+
 import { Loader } from "../../pending/"
-import { bgColorToCn } from "@/shared/utils/styles"
 
 const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
 type ButtonColor = (typeof buttonColorArray)[number]
 
 const buttonVariants = cva("rounded-my-sm my-transition", {
     variants: {
-        color: bgColorToCn,
+        color: bgVariants,
         status: {
             enabled: "cursor-pointer",
             disabled: "",

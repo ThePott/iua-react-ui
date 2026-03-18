@@ -1,8 +1,9 @@
-import { motionTransition } from "@/shared/utils/framerMotionAnimations"
 import clsx from "clsx"
 import { motion } from "motion/react"
 import { useState, type ReactNode } from "react"
+
 import { Hstack } from "@/components/layouts"
+import { motionTransition } from "@/shared/utils/framerMotionAnimations"
 
 type ToggleProps = {
     defaultIsOn?: boolean
@@ -29,13 +30,13 @@ const ToggleWrapper = ({ defaultIsOn, onChange, children, isBordered }: TogglePr
         >
             {children}
             <div>
-                <div className={clsx("rounded-full relative p-my-xs bg-fg-muted w-[34px] h-[14px]")}>
+                <div className={clsx("rounded-full relative p-my-xs bg-fg-muted w-8.5 h-3.5")}>
                     <motion.div
                         layoutId="toggle"
                         transition={motionTransition}
                         className={clsx(
-                            "size-[20px] rounded-full absolute top-1/2 -translate-y-1/2",
-                            isOn ? "right-[0px] bg-washed-green" : "left-[0px] bg-fg-vivid",
+                            "size-5 rounded-full absolute top-1/2 -translate-y-1/2",
+                            isOn ? "right-0 bg-washed-green" : "left-0 bg-fg-vivid",
                         )}
                     />
                 </div>

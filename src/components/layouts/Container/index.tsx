@@ -1,11 +1,13 @@
-import type { DivProps } from "@/shared/types"
-import { wideWidthToCn } from "@/shared/utils/styles"
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import { tv } from "tailwind-variants/lite"
 
-const containerVariants = cva("mx-auto", {
+import type { DivProps } from "@/shared/types"
+import { wideWidthVariants } from "@/shared/utils/styles"
+
+const containerVariants = tv({
+    base: "mx-auto",
     variants: {
-        width: wideWidthToCn,
+        width: wideWidthVariants,
         isPadded: {
             true: "p-my-xl",
             false: "",

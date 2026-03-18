@@ -1,26 +1,4 @@
-import { tv } from "tailwind-variants/lite" // NOTE: using `lite` to NOT use twMerge
-
 import type { Color, None, XsToXl } from "../types"
-
-// NOTE: only using tailwind-variants for auto complete by using tailwindcss intelisence
-// NOTE: it is no better tahn plan Record if no tailwindcss autocomplete
-
-// NOTE: this is for editor to detect pattern by regex and allow tailwindcss autocomplete
-/** EXAMPLE
-vim.lsp.config.tailwindcss = {
-	settings = {
-		tailwindCSS = {
-			experimental = {
-				classRegex = {
-					{ "Record<[\\w\\s|,]+,\\s*TailwindCSS>\\s*=\\s*\\{([\\s\\S]*?)\\}", "[\"'`]([^\"'`]*).*?[\"'`]" },
-				},
-			},
-		},
-	},
-}
-*/
-
-type TailwindCSS = string
 
 export const gapVariants: Record<None | XsToXl, TailwindCSS> = {
     none: "",

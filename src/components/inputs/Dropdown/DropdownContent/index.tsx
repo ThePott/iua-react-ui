@@ -1,14 +1,16 @@
-import useDetectOutsideClick from "@/shared/hooks/useDetectOutsideClick"
-import { narrowWidthToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import { type ReactNode } from "react"
 import { createPortal } from "react-dom"
+
+import useDetectOutsideClick from "@/shared/hooks/useDetectOutsideClick"
+import { narrowWidthVariants } from "@/shared/utils/styles"
+
 import useDropdownStore from "../useDropdownStore"
 
 const dropdownVariants = cva("", {
     variants: {
-        width: narrowWidthToCn,
+        width: narrowWidthVariants,
     },
 })
 
@@ -22,7 +24,11 @@ const DropdownContent = ({ children }: DropdownContentProps) => {
     const setIsOn = useDropdownStore((state) => state.setIsOn)
     const floatingReturns = useDropdownStore((state) => state.floatingReturns)
 
-    const { contentRef } = useDetectOutsideClick({ triggerRef, isOn, onOutsideClick: () => setIsOn(false) })
+    const { contentRef } = useDetectOutsideClick({
+        triggerRef,
+        isOn,
+        onOutsideClick: () => setIsOn(false),
+    })
 
     const refCallback = (node: HTMLDivElement | null) => {
         contentRef.current = node
@@ -33,7 +39,7 @@ const DropdownContent = ({ children }: DropdownContentProps) => {
         <div ref={refCallback} style={floatingReturns?.floatingStyles} className={clsx(dropdownVariants({ width }))}>
             {children}
         </div>,
-        document.body
+        document.body,
     )
 }
 

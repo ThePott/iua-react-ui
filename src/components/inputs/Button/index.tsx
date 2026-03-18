@@ -10,7 +10,7 @@ import { Loader } from "../../pending/"
 const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
 type ButtonColor = (typeof buttonColorArray)[number]
 
-const buttonVariants = cva("rounded-my-sm my-transition", {
+const buttonVariants = cva("rounded-iua-sm my-transition", {
     variants: {
         color: bgVariants,
         status: {
@@ -19,14 +19,14 @@ const buttonVariants = cva("rounded-my-sm my-transition", {
             pending: "",
         },
         padding: {
-            normal: "py-my-sm px-my-md",
-            wide: "py-my-xs px-my-md w-full",
-            tight: "p-my-xs",
+            normal: "py-iua-sm px-iua-md",
+            wide: "py-iua-xs px-iua-md w-full",
+            tight: "p-iua-xs",
             none: "",
         },
         isShadowed: {
             false: "",
-            true: "shadow-my-sm",
+            true: "shadow-iua-sm",
         },
         border: {
             always: "",

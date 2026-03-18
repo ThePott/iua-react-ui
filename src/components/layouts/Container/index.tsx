@@ -9,7 +9,7 @@ const containerVariants = tv({
     variants: {
         width: wideWidthVariants,
         isPadded: {
-            true: "p-my-xl",
+            true: "p-iua-xl",
             false: "",
         },
     },
@@ -24,7 +24,7 @@ const Container = ({ width = "lg", isPadded = false, ...props }: DivProps & With
     const { className, children, ...rest } = props
 
     return (
-        <div {...rest} className={clsx(containerVariants({ width, isPadded }), className)}>
+        <div {...rest} className={clsx(containerVariants({ width, isPadded }), className, "p-iua-xl")}>
             {children}
         </div>
     )

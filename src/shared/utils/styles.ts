@@ -1,4 +1,4 @@
-import type { Color, None, XsToXl } from "../types"
+import type { Color, None, TailwindCSS, XsToXl } from "../types"
 
 export const gapVariants: Record<None | XsToXl, TailwindCSS> = {
     none: "",

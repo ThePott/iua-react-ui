@@ -1,7 +1,9 @@
 import { type ReactNode } from "react"
-import DropdownContent from "../DropdownContent"
+
 import { Vstack } from "@/components/layouts"
 import RoundBox from "@/components/layouts/RoundBox"
+
+import DropdownContent from "../DropdownContent"
 
 type DropdownMenuProps = {
     children: ReactNode
@@ -9,7 +11,7 @@ type DropdownMenuProps = {
 const DropdownMenu = ({ children }: DropdownMenuProps) => {
     return (
         <DropdownContent>
-            <RoundBox radius="md" color="bg3" padding="md" isShadowed className="text-my-sm text-fg-vivid">
+            <RoundBox radius="md" color="bg2" padding="md" isShadowed className="text-iua-sm text-fg-vivid">
                 <Vstack gap="none">{children}</Vstack>
             </RoundBox>
         </DropdownContent>

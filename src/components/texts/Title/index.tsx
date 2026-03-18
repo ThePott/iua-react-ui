@@ -1,13 +1,14 @@
-import type { HeadingProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
+
+import type { HeadingProps } from "@/shared/types"
 
 const titleVariants = cva("font-semibold", {
     variants: {
         size: {
             md: "",
-            lg: "text-my-lg",
-            xl: "text-my-xl",
+            lg: "text-iua-lg",
+            xl: "text-iua-xl",
         },
         isMuted: {
             false: "",

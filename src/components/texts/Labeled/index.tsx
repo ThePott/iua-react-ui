@@ -1,12 +1,14 @@
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ReactNode } from "react"
-import LabeledContext from "./LabeledContext"
-import useLabeledContext from "./useLabeledContext"
+
 import { Input } from "@/components/inputs"
 import { Hstack, Vstack } from "@/components/layouts"
 import { ExpandableDiv } from "@/components/wrappers"
 import type { PProps, InputProps, DivProps } from "@/shared/types"
+
+import LabeledContext from "./LabeledContext"
+import useLabeledContext from "./useLabeledContext"
 
 const LabeledHeader = (props: PProps) => {
     const { className, children, ...rest } = props
@@ -23,7 +25,7 @@ const LabeledHeader = (props: PProps) => {
     )
 }
 
-const labelFooterVariants = cva("text-my-sm", {
+const labelFooterVariants = cva("text-iua-sm", {
     variants: {
         isInDanger: {
             false: "",

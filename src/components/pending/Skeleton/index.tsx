@@ -1,15 +1,17 @@
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
-import styles from "./index.module.css"
+
 import type { SmToLg, None, DivProps } from "@/shared/types"
+
+import styles from "./index.module.css"
 
 const skeletonVariants = cva("", {
     variants: {
         radius: {
             none: "rounded-none",
-            sm: "rounded-my-sm",
-            md: "rounded-my-md",
-            lg: "rounded-my-lg",
+            sm: "rounded-iua-sm",
+            md: "rounded-iua-md",
+            lg: "rounded-iua-lg",
         },
         isShadowed: {
             true: "",
@@ -20,17 +22,17 @@ const skeletonVariants = cva("", {
         {
             radius: "sm",
             isShadowed: true,
-            className: "shadow-my-sm",
+            className: "shadow-iua-sm",
         },
         {
             radius: "md",
             isShadowed: true,
-            className: "shadow-my-md",
+            className: "shadow-iua-md",
         },
         {
             radius: "lg",
             isShadowed: true,
-            className: "shadow-my-lg",
+            className: "shadow-iua-lg",
         },
     ],
 })

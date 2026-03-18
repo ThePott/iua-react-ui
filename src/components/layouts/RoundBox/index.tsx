@@ -14,9 +14,9 @@ const roundBoxVariants = tv({
         },
         radius: {
             none: "rounded-none",
-            sm: "rounded-my-sm",
-            md: "rounded-my-md",
-            lg: "rounded-my-lg",
+            sm: "rounded-iua-sm",
+            md: "rounded-iua-md",
+            lg: "rounded-iua-lg",
         },
         isShadowed: {
             true: "",
@@ -27,17 +27,17 @@ const roundBoxVariants = tv({
         {
             radius: "sm",
             isShadowed: true,
-            className: "shadow-my-sm",
+            className: "shadow-iua-sm",
         },
         {
             radius: "md",
             isShadowed: true,
-            className: "shadow-my-md",
+            className: "shadow-iua-md",
         },
         {
             radius: "lg",
             isShadowed: true,
-            className: "shadow-my-lg",
+            className: "shadow-iua-lg",
         },
     ],
 })

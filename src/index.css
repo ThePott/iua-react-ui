@@ -6,6 +6,8 @@
     font-weight: 400;
 
     color-scheme: light dark;
+    background-color: var(--color-iua-bg-neg-1);
+    color: var(--color-iua-fg-vivid);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -28,18 +30,18 @@
     --sizing-iua-xl: 960px;
 
     --shadow-iua-sm:
-        inset 0px 1px 2px rgba(from var(--color-fg-vivid) r g b / 0.2), 0px 4px 4px -1px #00000025,
+        inset 0px 1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.2), 0px 4px 4px -1px #00000025,
         0px 2px 2px -2px #00000025;
     --shadow-iua-md:
-        inset 0px 1px 2px rgba(from var(--color-fg-vivid) r g b / 0.4), 0px 6px 6px -2px #00000025,
+        inset 0px 1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.4), 0px 6px 6px -2px #00000025,
         0px 3px 3px -3px #00000025;
     --shadow-iua-lg:
-        inset 0px 1px 2px rgba(from var(--color-fg-vivid) r g b / 0.6), 0px 24px 24px -8px #00000025,
+        inset 0px 1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.6), 0px 24px 24px -8px #00000025,
         0px 12px 12px -12px #00000025;
 
-    --shadow-inward-iua-sm: inset 0px -1px 2px rgba(from var(--color-fg-vivid) r g b / 0.3);
-    --shadow-inward-iua-md: inset 0px -1px 2px rgba(from var(--color-fg-vivid) r g b / 0.4);
-    --shadow-inward-iua-lg: inset 0px -1px 2px rgba(from var(--color-fg-vivid) r g b / 0.6);
+    --shadow-inward-iua-sm: inset 0px -1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.3);
+    --shadow-inward-iua-md: inset 0px -1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.4);
+    --shadow-inward-iua-lg: inset 0px -1px 2px oklch(from var(--color-iua-fg-vivid) l c h / 0.6);
 
     --radius-iua-sm: 6px;
     --radius-iua-md: 12px;
@@ -84,11 +86,8 @@
     --color-iua-blue-1: oklch(from var(--color-iua-blue-0) calc(l - 0.01) c h);
     --color-iua-blue-2: oklch(from var(--color-iua-blue-1) calc(l - 0.01) c h);
 
-    /* Ghostty Default Theme - colors from ghostty-default-dark-theme.png
-   Light mode: inverted lightness (1 - l) */
-}
+    /* following is for ghostty theme */
 
-[data-schema="ghostty"] {
     --color-iua-bg-base: light-dark(oklch(0.8 0.01 250), oklch(0.2 0.01 250));
     --color-iua-fg-base: light-dark(oklch(0.19 0.01 110), oklch(0.81 0.01 110));
     --color-iua-fg-inverted-base: light-dark(oklch(0.81 0.01 110), oklch(0.19 0.01 110));
@@ -97,3 +96,6 @@
     --color-iua-green-base: light-dark(oklch(0.24 0.12 110), oklch(0.76 0.12 110));
     --color-iua-blue-base: light-dark(oklch(0.32 0.07 240), oklch(0.68 0.07 240));
 }
+
+/* [data-schema="ghostty"] { */
+/* } */

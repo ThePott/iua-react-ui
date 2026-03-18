@@ -1,17 +1,19 @@
-import { Hstack } from "@/components/layouts"
-import type { InputProps } from "@/shared/types"
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { JSX } from "react"
+import { tv } from "tailwind-variants/lite"
 
-const inputVariants = cva("rounded-my-sm my-transition items-center outline", {
+import { Hstack } from "@/components/layouts"
+import type { InputProps } from "@/shared/types"
+
+const inputVariants = tv({
+    base: "rounded-iua-sm iua-transition items-center outline",
     variants: {
         isRed: {
             false: "focus-within:outline-border-muted outline-transparent",
             true: "focus-within:outline-washed-red focus-within:outline-2 outline-washed-red",
         },
         variant: {
-            contained: "bg-bg-2 shadow-inward-my-sm",
+            contained: "bg-bg-2 shadow-inward-iua-sm",
             ghost: "",
         },
         colorChangeIn: {

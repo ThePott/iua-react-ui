@@ -1,17 +1,18 @@
-import { Hstack } from "@/components/layouts"
-import type { TextareaProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { JSX } from "react"
 
-const textareaVariants = cva("rounded-my-sm outline my-transition items-center", {
+import { Hstack } from "@/components/layouts"
+import type { TextareaProps } from "@/shared/types"
+
+const textareaVariants = cva("rounded-iua-sm outline my-transition items-center", {
     variants: {
         isRed: {
             false: "focus-within:outline-border-muted outline-transparent",
             true: "focus-within:outline-washed-red focus-within:outline-2 outline-washed-red",
         },
         variant: {
-            contained: "bg-bg-2 shadow-inward-my-sm",
+            contained: "bg-bg-2 shadow-inward-iua-sm",
             ghost: "",
         },
     },

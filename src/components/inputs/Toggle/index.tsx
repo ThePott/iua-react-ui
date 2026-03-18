@@ -30,7 +30,7 @@ const ToggleWrapper = ({ defaultIsOn, onChange, children, isBordered }: TogglePr
         >
             {children}
             <div>
-                <div className={clsx("rounded-full relative p-my-xs bg-fg-muted w-8.5 h-3.5")}>
+                <div className={clsx("rounded-full relative p-iua-xs bg-fg-muted w-8.5 h-3.5")}>
                     <motion.div
                         layoutId="toggle"
                         transition={motionTransition}

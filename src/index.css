@@ -13,53 +13,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-[data-theme="dark"] {
-    --color-iua-bg-neg-1: oklch(from var(--color-iua-bg-0) calc(l + 0.01) c h);
-    --color-iua-bg-0: oklch(from var(--color-iua-bg-base) l c h);
-    --color-iua-bg-1: oklch(from var(--color-iua-bg-0) calc(l - 0.01) c h);
-    --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.01) c h);
-
-    --color-iua-fg-vivid: oklch(from var(--color-iua-fg-base) l c h);
-    --color-iua-fg-muted: oklch(from var(--color-iua-fg-vivid) l c h / 0.6);
-    --color-iua-fg-dim: oklch(from var(--color-iua-fg-muted) l c h / 0.6);
-
-    --color-iua-fg-inverted-vivid: oklch(from var(--color-iua-fg-inverted-base) l c h);
-    --color-iua-fg-inverted-muted: oklch(from var(--color-iua-fg-inverted-vivid) l c h / 0.6);
-    --color-iua-fg-inverted-dim: oklch(from var(--color-iua-fg-inverted-muted) l c h / 0.6);
-
-    --color-iua-red-neg-1: oklch(from var(--color-iua-red-0) l c h / 0.6);
-    --color-iua-red-0: oklch(from var(--color-iua-red-base) l c h);
-    --color-iua-red-1: oklch(from var(--color-iua-red-0) calc(l - 0.01) c h);
-    --color-iua-red-2: oklch(from var(--color-iua-red-1) calc(l - 0.01) c h);
-
-    --color-iua-yellow-neg-1: oklch(from var(--color-iua-yellow-0) l c h / 0.6);
-    --color-iua-yellow-0: oklch(from var(--color-iua-yellow-base) l c h);
-    --color-iua-yellow-1: oklch(from var(--color-iua-yellow-0) calc(l - 0.01) c h);
-    --color-iua-yellow-2: oklch(from var(--color-iua-yellow-1) calc(l - 0.01) c h);
-
-    --color-iua-green-neg-1: oklch(from var(--color-iua-green-0) l c h / 0.6);
-    --color-iua-green-0: oklch(from var(--color-iua-green-base) l c h);
-    --color-iua-green-1: oklch(from var(--color-iua-green-0) calc(l - 0.01) c h);
-    --color-iua-green-2: oklch(from var(--color-iua-green-1) calc(l - 0.01) c h);
-
-    --color-iua-blue-neg-1: oklch(from var(--color-iua-blue-0) l c h / 0.6);
-    --color-iua-blue-0: oklch(from var(--color-iua-blue-base) l c h);
-    --color-iua-blue-1: oklch(from var(--color-iua-blue-0) calc(l - 0.01) c h);
-    --color-iua-blue-2: oklch(from var(--color-iua-blue-1) calc(l - 0.01) c h);
-}
-
-/* Ghostty Default Theme - colors from ghostty-default-dark-theme.png
-   Light mode: inverted lightness (1 - l) */
-[data-schema="ghostty"] {
-    --color-iua-bg-base: light-dark(oklch(0.8 0.01 250), oklch(0.2 0.01 250));
-    --color-iua-fg-base: light-dark(oklch(0.19 0.01 110), oklch(0.81 0.01 110));
-    --color-iua-fg-inverted-base: light-dark(oklch(0.81 0.01 110), oklch(0.19 0.01 110));
-    --color-iua-red-base: light-dark(oklch(0.38 0.14 25), oklch(0.62 0.14 25));
-    --color-iua-yellow-base: light-dark(oklch(0.16 0.11 85), oklch(0.84 0.11 85));
-    --color-iua-green-base: light-dark(oklch(0.24 0.12 110), oklch(0.76 0.12 110));
-    --color-iua-blue-base: light-dark(oklch(0.32 0.07 240), oklch(0.68 0.07 240));
-}
-
 @theme {
     --spacing-iua-xs: 4px;
     --spacing-iua-sm: 8px;
@@ -97,4 +50,50 @@
     --text-iua-md: 16px;
     --text-iua-lg: 18px;
     --text-iua-xl: 24px;
+
+    --color-iua-bg-neg-1: oklch(from var(--color-iua-bg-0) calc(l + 0.01) c h);
+    --color-iua-bg-0: oklch(from var(--color-iua-bg-base) l c h);
+    --color-iua-bg-1: oklch(from var(--color-iua-bg-0) calc(l - 0.01) c h);
+    --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.01) c h);
+
+    --color-iua-fg-vivid: oklch(from var(--color-iua-fg-base) l c h);
+    --color-iua-fg-muted: oklch(from var(--color-iua-fg-vivid) l c h / 0.6);
+    --color-iua-fg-dim: oklch(from var(--color-iua-fg-muted) l c h / 0.6);
+
+    --color-iua-fg-inverted-vivid: oklch(from var(--color-iua-fg-inverted-base) l c h);
+    --color-iua-fg-inverted-muted: oklch(from var(--color-iua-fg-inverted-vivid) l c h / 0.6);
+    --color-iua-fg-inverted-dim: oklch(from var(--color-iua-fg-inverted-muted) l c h / 0.6);
+
+    --color-iua-red-neg-1: oklch(from var(--color-iua-red-0) l c h / 0.6);
+    --color-iua-red-0: oklch(from var(--color-iua-red-base) l c h);
+    --color-iua-red-1: oklch(from var(--color-iua-red-0) calc(l - 0.01) c h);
+    --color-iua-red-2: oklch(from var(--color-iua-red-1) calc(l - 0.01) c h);
+
+    --color-iua-yellow-neg-1: oklch(from var(--color-iua-yellow-0) l c h / 0.6);
+    --color-iua-yellow-0: oklch(from var(--color-iua-yellow-base) l c h);
+    --color-iua-yellow-1: oklch(from var(--color-iua-yellow-0) calc(l - 0.01) c h);
+    --color-iua-yellow-2: oklch(from var(--color-iua-yellow-1) calc(l - 0.01) c h);
+
+    --color-iua-green-neg-1: oklch(from var(--color-iua-green-0) l c h / 0.6);
+    --color-iua-green-0: oklch(from var(--color-iua-green-base) l c h);
+    --color-iua-green-1: oklch(from var(--color-iua-green-0) calc(l - 0.01) c h);
+    --color-iua-green-2: oklch(from var(--color-iua-green-1) calc(l - 0.01) c h);
+
+    --color-iua-blue-neg-1: oklch(from var(--color-iua-blue-0) l c h / 0.6);
+    --color-iua-blue-0: oklch(from var(--color-iua-blue-base) l c h);
+    --color-iua-blue-1: oklch(from var(--color-iua-blue-0) calc(l - 0.01) c h);
+    --color-iua-blue-2: oklch(from var(--color-iua-blue-1) calc(l - 0.01) c h);
+
+    /* Ghostty Default Theme - colors from ghostty-default-dark-theme.png
+   Light mode: inverted lightness (1 - l) */
+}
+
+[data-schema="ghostty"] {
+    --color-iua-bg-base: light-dark(oklch(0.8 0.01 250), oklch(0.2 0.01 250));
+    --color-iua-fg-base: light-dark(oklch(0.19 0.01 110), oklch(0.81 0.01 110));
+    --color-iua-fg-inverted-base: light-dark(oklch(0.81 0.01 110), oklch(0.19 0.01 110));
+    --color-iua-red-base: light-dark(oklch(0.38 0.14 25), oklch(0.62 0.14 25));
+    --color-iua-yellow-base: light-dark(oklch(0.16 0.11 85), oklch(0.84 0.11 85));
+    --color-iua-green-base: light-dark(oklch(0.24 0.12 110), oklch(0.76 0.12 110));
+    --color-iua-blue-base: light-dark(oklch(0.32 0.07 240), oklch(0.68 0.07 240));
 }

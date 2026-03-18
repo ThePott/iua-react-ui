@@ -1,14 +1,15 @@
-import type { SmToLg, None, XsToXl, DivProps, Color } from "@/shared/types"
-import { bgColorToCn, paddingToCn } from "@/shared/utils/styles"
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import { tv } from "tailwind-variants/lite"
 
-const roundBoxVariants = cva("", {
+import type { SmToLg, None, XsToXl, DivProps, Color } from "@/shared/types"
+import { bgVariants, paddingVariants } from "@/shared/utils/styles"
+
+const roundBoxVariants = tv({
     variants: {
-        padding: paddingToCn,
-        color: bgColorToCn,
+        padding: paddingVariants,
+        color: bgVariants,
         isBordered: {
-            true: "border border-border-dim",
+            true: "border border-iua-fg-dim", // TODO: color not supported
             false: "",
         },
         radius: {

@@ -1,12 +1,12 @@
-import type { DivProps, InputProps, PProps } from "@/shared/interfaces"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ReactNode } from "react"
-import ExpandableDiv from "../ExpandableDiv/ExpendableDiv"
-import Input from "../Input/Input"
-import { Hstack, Vstack } from "../layouts"
 import LabeledContext from "./LabeledContext"
 import useLabeledContext from "./useLabeledContext"
+import { Input } from "@/components/inputs"
+import { Hstack, Vstack } from "@/components/layouts"
+import { ExpandableDiv } from "@/components/wrappers"
+import type { PProps, InputProps, DivProps } from "@/shared/types"
 
 const LabeledHeader = (props: PProps) => {
     const { className, children, ...rest } = props

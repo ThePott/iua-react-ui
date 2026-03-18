@@ -1,4 +1,4 @@
-import type { DivProps } from "@/shared/interfaces"
+import type { DivProps } from "@/shared/types"
 import clsx from "clsx"
 
 const CenterContainer = (props: DivProps) => {

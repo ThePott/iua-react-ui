@@ -1,7 +1,7 @@
 import { type ReactNode } from "react"
-import { Vstack } from "../../layouts"
-import RoundBox from "../../RoundBox"
 import DropdownContent from "../DropdownContent"
+import { Vstack } from "@/components/layouts"
+import RoundBox from "@/components/layouts/RoundBox"
 
 type DropdownMenuProps = {
     children: ReactNode

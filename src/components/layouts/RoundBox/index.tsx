@@ -1,12 +1,12 @@
-import type { Color, DivProps, None, SmToLg, XsToXl } from "@/shared/interfaces"
-import { boxColorToCn, paddingToCn } from "@/shared/utils/styles"
+import type { SmToLg, None, XsToXl, DivProps, Color } from "@/shared/types"
+import { bgColorToCn, paddingToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 
 const roundBoxVariants = cva("", {
     variants: {
         padding: paddingToCn,
-        color: boxColorToCn,
+        color: bgColorToCn,
         isBordered: {
             true: "border border-border-dim",
             false: "",
@@ -49,7 +49,14 @@ interface RoundBoxProps {
     isShadowed?: boolean
 }
 
-const RoundBox = ({ radius = "sm", padding, color, isBordered, isShadowed, ...props }: DivProps & RoundBoxProps) => {
+const RoundBox = ({
+    radius = "sm",
+    padding,
+    color = "transparent",
+    isBordered,
+    isShadowed,
+    ...props
+}: Omit<DivProps, "color"> & RoundBoxProps) => {
     const { className, children, ...rest } = props
     return (
         <div

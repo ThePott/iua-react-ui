@@ -1,7 +1,7 @@
-import type { DivProps, None, SmToLg } from "@/shared/interfaces"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
-import styles from "./Skeleton.module.css"
+import styles from "./index.module.css"
+import type { SmToLg, None, DivProps } from "@/shared/types"
 
 const skeletonVariants = cva("", {
     variants: {

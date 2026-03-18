@@ -1,4 +1,4 @@
-import type { XsToXl } from "@/shared/interfaces"
+import type { XsToXl } from "@/shared/types"
 import type { useFloating } from "@floating-ui/react"
 import { createContext, useCallback, useRef, useState, type ReactNode } from "react"
 import { createStore, type StoreApi } from "zustand"

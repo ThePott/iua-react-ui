@@ -1,5 +1,5 @@
 import { Hstack } from "@/components/layouts"
-import type { TextareaProps } from "@/shared/interfaces"
+import type { TextareaProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { JSX } from "react"

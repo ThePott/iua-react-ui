@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, type ReactNode } from "react"
-import { Vstack } from "../layouts"
-import RoundBox from "../RoundBox"
 import { useSelectStore } from "./_selectStore"
+import { Vstack } from "@/components/layouts"
+import RoundBox from "@/components/layouts/RoundBox"
 
 const SelectContent = ({ children }: { children: ReactNode }) => {
     const isOpened = useSelectStore((state) => state.isOpened)
@@ -30,7 +30,7 @@ const SelectContent = ({ children }: { children: ReactNode }) => {
 
             setIsOpened(false)
         },
-        [setIsOpened, triggerRef]
+        [setIsOpened, triggerRef],
     )
 
     useEffect(() => {

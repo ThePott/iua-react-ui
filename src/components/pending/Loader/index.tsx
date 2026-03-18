@@ -1,4 +1,4 @@
-import type { XsToXl } from "@/shared/interfaces"
+import type { XsToXl } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import styles from "./index.module.css"

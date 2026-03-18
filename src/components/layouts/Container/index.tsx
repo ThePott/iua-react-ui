@@ -1,4 +1,4 @@
-import type { DivProps } from "@/shared/interfaces"
+import type { DivProps } from "@/shared/types"
 import { wideWidthToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"

@@ -1,4 +1,4 @@
-import type { DivProps, None, XsToXl } from "@/shared/interfaces"
+import type { DivProps, None, XsToXl } from "@/shared/types"
 import { gapToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"

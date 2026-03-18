@@ -1,58 +1,87 @@
-import type { XsToXl, None, Color } from "../types"
-import { squashObject } from "./squashObject"
+import { tv } from "tailwind-variants/lite" // NOTE: using `lite` to NOT use twMerge
+import type { Color, None, XsToXl } from "../types"
 
-export const gapToCn: Record<XsToXl | None, string> = {
-    none: "gap-0",
-    xs: "gap-my-xs",
-    sm: "gap-my-sm",
-    md: "gap-my-md",
-    lg: "gap-my-lg",
-    xl: "gap-my-xl",
-}
+// NOTE: only using tailwind-variants for auto complete by using tailwindcss intelisence
+// NOTE: it is no better tahn plan Record if no tailwindcss autocomplete
 
-export const paddingToCn: Record<XsToXl | None, string> = {
-    none: "p-0",
-    xs: "p-my-xs",
-    sm: "p-my-sm",
-    md: "p-my-md",
-    lg: "p-my-lg",
-    xl: "p-my-xl",
-}
+export const gapVariants = tv({
+    variants: {
+        ...({
+            none: "",
+            xs: "gap-iua-xs",
+            sm: "gap-iua-sm",
+            md: "gap-iua-md",
+            lg: "gap-iua-lg",
+            xl: "gap-iua-xl",
+        } satisfies Record<None | XsToXl, string>),
+    },
+})
 
-export const bgColorToCn: Record<Color, string> = {
-    bgNeg1: "bg-bg-neg-1",
-    bg0: "bg-bg-0",
-    bg1: "bg-bg-1",
-    bg2: "bg-bg-2",
-    red: "bg-washed-red",
-    yellow: "",
-    blue: "bg-washed-blue",
-    green: "bg-washed-green",
-    transparent: "",
-}
+export const paddingVariants = tv({
+    variants: {
+        ...({
+            none: "",
+            xs: "p-iua-xs",
+            sm: "p-iua-sm",
+            md: "p-iua-md",
+            lg: "p-iua-lg",
+            xl: "p-iua-xl",
+        } satisfies Record<None | XsToXl, string>),
+    },
+})
 
-export const buttonColorToTextCn: Record<ButtonColor, string> = {
-    green: "text-fg-inverted-vivid",
-    red: "text-fg-inverted-vivid",
-    bg0: "",
-    bg1: "",
-    bg2: "",
-    transparent: "",
-}
+export const bgVariants = tv({
+    variants: {
+        ...({
+            bgNeg1: "bg-iua-bg-neg-1",
+            bg0: "bg-iua-bg-0",
+            bg1: "bg-iua-bg-1",
+            bg2: "bg-iua-bg-2",
+            red: "bg-iua-red-0",
+            yellow: "bg-iua-yellow-0",
+            blue: "bg-iua-blue-0",
+            green: "bg-iua-green-0",
+            transparent: "",
+        } satisfies Record<Color, string>),
+    },
+})
 
-export const buttonColorToCn = squashObject(buttonColorArray, { ...boxColorToCn, transparent: "" }, buttonColorToTextCn)
+export const fgFromBgVariants = tv({
+    variants: {
+        ...({
+            bgNeg1: "",
+            bg0: "",
+            bg1: "",
+            bg2: "",
+            red: "",
+            yellow: "text-iua-inverted-vivid",
+            blue: "text-iua-inverted-vivid",
+            green: "text-iua-inverted-vivid",
+            transparent: "",
+        } satisfies Record<Color, string>),
+    },
+})
 
-export const wideWidthToCn: Record<XsToXl, string> = {
-    xs: "max-w-[200px] w-full",
-    sm: "max-w-[400px] w-full",
-    md: "max-w-[600px] w-full",
-    lg: "max-w-[800px] w-full",
-    xl: "max-w-[1000px] w-full",
-}
-export const narrowWidthToCn: Record<XsToXl, string> = {
-    xs: "w-[100px]",
-    sm: "w-[200px]",
-    md: "w-[300px]",
-    lg: "w-[400px]",
-    xl: "w-[500px]",
-}
+export const wideWidthVariants = tv({
+    variants: {
+        ...({
+            xs: "max-w-50 w-full",
+            sm: "max-w-100 w-full",
+            md: "max-w-150 w-full",
+            lg: "max-w-200 w-full",
+            xl: "max-w-250 w-full",
+        } satisfies Record<XsToXl, string>),
+    },
+})
+
+export const narrowWidthVariants = tv({
+    variants: {
+        ...({
+            xs: "w-25",
+            sm: "w-50",
+            md: "w-75",
+            lg: "w-100",
+            xl: "w-125",
+        } satisfies Record<XsToXl, string>),
+    },
+})

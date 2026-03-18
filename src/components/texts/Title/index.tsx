@@ -1,4 +1,4 @@
-import type { HeadingProps } from "@/shared/interfaces"
+import type { HeadingProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 

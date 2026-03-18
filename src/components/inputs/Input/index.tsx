@@ -1,8 +1,8 @@
-import type { InputProps } from "@/shared/interfaces"
+import { Hstack } from "@/components/layouts"
+import type { InputProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { JSX } from "react"
-import { Hstack } from "../layouts"
 
 const inputVariants = cva("rounded-my-sm my-transition items-center outline", {
     variants: {
@@ -48,7 +48,7 @@ const Input = ({
     return (
         <Hstack style={style} className={clsx(inputVariants({ isRed, variant, colorChangeIn }), className)}>
             <input {...rest} className="w-full border-0 px-3 py-2 outline-0" />
-            {trailingIcon && trailingIcon}
+            {trailingIcon}
         </Hstack>
     )
 }

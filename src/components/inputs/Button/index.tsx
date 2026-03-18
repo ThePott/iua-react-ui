@@ -1,16 +1,16 @@
 import { Hstack } from "@/components/layouts"
-import { buttonColorToCn } from "@/shared/utils/styles"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
 import { Loader } from "../../pending/"
+import { bgColorToCn } from "@/shared/utils/styles"
 
 const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
 type ButtonColor = (typeof buttonColorArray)[number]
 
 const buttonVariants = cva("rounded-my-sm my-transition", {
     variants: {
-        color: buttonColorToCn,
+        color: bgColorToCn,
         status: {
             enabled: "cursor-pointer",
             disabled: "",
@@ -36,23 +36,42 @@ const buttonVariants = cva("rounded-my-sm my-transition", {
         // NOTE: text colors
         { color: ["transparent"], className: "disabled:text-fg-muted" },
         { color: ["bg0", "bg1", "bg2"], className: "text-fg-vivid disabled:text-fg-muted" },
-        { color: ["green", "red"], className: "text-fg-inverted-vivid disabled:text-fg-inverted-muted" },
+        {
+            color: ["green", "red"],
+            className: "text-fg-inverted-vivid disabled:text-fg-inverted-muted",
+        },
 
         // NOTE: background colors
         { color: "bg0", status: "enabled", className: "hover:bg-bg-1 active:bg-bg-2" },
         { color: "bg1", status: "enabled", className: "hover:bg-bg-2 active:bg-bg-3" },
         { color: "bg2", status: "enabled", className: "hover:bg-bg-3 active:bg-washed-black" },
 
-        { color: "green", status: "enabled", className: "hover:bg-washed-green-1 active:bg-washed-green-2" },
+        {
+            color: "green",
+            status: "enabled",
+            className: "hover:bg-washed-green-1 active:bg-washed-green-2",
+        },
         { color: "green", status: "disabled", className: "bg-washed-green-neg-1" },
         { color: "green", status: "pending", className: "bg-washed-green-neg-1" },
 
-        { color: "red", status: "enabled", className: "bg-washed-red hover:bg-washed-red-1 active:bg-washed-red-2" },
+        {
+            color: "red",
+            status: "enabled",
+            className: "bg-washed-red hover:bg-washed-red-1 active:bg-washed-red-2",
+        },
         { color: "red", status: "disabled", className: "bg-washed-red-neg-1" },
         { color: "red", status: "pending", className: "bg-washed-red-neg-1" },
 
-        { border: "onHover", status: "enabled", className: "border border-transparent hover:border-border-muted" },
-        { border: "always", status: "enabled", className: "border border-border-dim hover:border-border-muted" },
+        {
+            border: "onHover",
+            status: "enabled",
+            className: "border border-transparent hover:border-border-muted",
+        },
+        {
+            border: "always",
+            status: "enabled",
+            className: "border border-border-dim hover:border-border-muted",
+        },
     ],
 })
 

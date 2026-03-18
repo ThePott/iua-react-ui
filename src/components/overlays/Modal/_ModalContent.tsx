@@ -1,4 +1,4 @@
-import type { SmToLg } from "@/shared/interfaces"
+import type { SmToLg } from "@/shared/types"
 import type { ReactNode } from "react"
 import { Container, Vstack } from "../layouts"
 import RoundBox from "../RoundBox"

@@ -23,7 +23,7 @@ const ToggleWrapper = ({ defaultIsOn, onChange, children, isBordered }: TogglePr
             gap="md"
             className={clsx(
                 "items-center rounded-full cursor-pointer select-none",
-                isBordered && "px-4 py-2 border border-border-dim"
+                isBordered && "px-4 py-2 border border-border-dim",
             )}
             onClick={handleClick}
         >
@@ -35,7 +35,7 @@ const ToggleWrapper = ({ defaultIsOn, onChange, children, isBordered }: TogglePr
                         transition={motionTransition}
                         className={clsx(
                             "size-[20px] rounded-full absolute top-1/2 -translate-y-1/2",
-                            isOn ? "right-[0px] bg-washed-green" : "left-[0px] bg-fg-vivid"
+                            isOn ? "right-[0px] bg-washed-green" : "left-[0px] bg-fg-vivid",
                         )}
                     />
                 </div>
@@ -46,7 +46,7 @@ const ToggleWrapper = ({ defaultIsOn, onChange, children, isBordered }: TogglePr
 
 const Toggle = (props: ToggleProps) => {
     const { defaultIsOn } = props
-    return <ToggleWrapper {...props} key={String(defaultIsOn)} />
+    return <ToggleWrapper key={String(defaultIsOn)} {...props} />
 }
 
 export default Toggle

@@ -1,4 +1,4 @@
-import type { DivProps } from "@/shared/interfaces"
+import type { DivProps } from "@/shared/types"
 import { flip, offset, shift, useFloating } from "@floating-ui/react"
 import { useEffect, useRef } from "react"
 import SelectContent from "./_SelectContent"

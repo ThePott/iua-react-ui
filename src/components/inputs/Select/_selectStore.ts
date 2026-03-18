@@ -1,4 +1,4 @@
-import createLocalStore from "@/shared/store/createLocalStore"
+import createLocalStore from "@/components/wrappers/createLocalStore"
 import type { useFloating } from "@floating-ui/react"
 import type { RefObject } from "react"
 import type { WithSelectProps } from "."

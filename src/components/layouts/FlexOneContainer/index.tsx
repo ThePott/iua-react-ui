@@ -1,4 +1,4 @@
-import type { DivProps } from "@/shared/interfaces"
+import type { DivProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 

@@ -1,14 +1,14 @@
 import useDetectOutsideClick from "@/shared/hooks/useDetectOutsideClick"
-import type { ValueLabel } from "@/shared/interfaces"
 import useGlobalStore from "@/shared/store/globalStore"
 import clsx from "clsx"
 import { getRegExp } from "korean-regexp"
 import { useEffect, type ReactNode } from "react"
 import { createPortal } from "react-dom"
 import Button from "../../Button"
-import { Vstack } from "../../layouts"
-import RoundBox from "../../RoundBox"
 import useLocalAutoCompleteStore from "../useLocalAutoCompleteStore"
+import { Vstack } from "@/components/layouts"
+import RoundBox from "@/components/layouts/RoundBox"
+import type { ValueLabel } from "@/shared/types"
 
 type LocalAutoCompleteOptionProps = {
     option: ValueLabel

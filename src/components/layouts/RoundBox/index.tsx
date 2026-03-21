@@ -9,7 +9,7 @@ const roundBoxVariants = tv({
         padding: paddingVariants,
         color: bgVariants,
         isBordered: {
-            true: "border border-iua-fg-dim", // TODO: color not supported
+            true: "border border-iua-fg-dim",
             false: "",
         },
         radius: {

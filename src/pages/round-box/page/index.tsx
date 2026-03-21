@@ -13,7 +13,13 @@ const RoundBoxPage = () => {
                             bg
                         </Title>
                         <Hstack className="flex-wrap">
-                            <RoundBox padding="lg" color="bgNeg1">
+                            <RoundBox padding="lg" color="bgNeg1" className="border border-iua-fg-dim">
+                                bg-neg-1
+                            </RoundBox>
+                            <RoundBox padding="lg" color="bgNeg1" className="border border-iua-fg-muted">
+                                bg-neg-1
+                            </RoundBox>
+                            <RoundBox padding="lg" color="bgNeg1" className="border border-iua-fg-vivid">
                                 bg-neg-1
                             </RoundBox>
                             <RoundBox padding="lg" color="bg0">

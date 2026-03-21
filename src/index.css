@@ -61,18 +61,18 @@
     --text-iua-lg: 18px;
     --text-iua-xl: 24px;
 
-    --color-iua-bg-neg-1: oklch(from var(--color-iua-bg-0) calc(l + 0.01) c h);
+    --color-iua-bg-neg-1: oklch(from var(--color-iua-bg-0) calc(l + 0.02) c h);
     --color-iua-bg-0: oklch(from var(--color-iua-bg-base) l c h);
-    --color-iua-bg-1: oklch(from var(--color-iua-bg-0) calc(l - 0.01) c h);
-    --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.01) c h);
+    --color-iua-bg-1: oklch(from var(--color-iua-bg-0) calc(l - 0.02) c h);
+    --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.02) c h);
 
     --color-iua-fg-vivid: oklch(from var(--color-iua-fg-base) l c h);
-    --color-iua-fg-muted: oklch(from var(--color-iua-fg-vivid) l c h / 0.6);
-    --color-iua-fg-dim: oklch(from var(--color-iua-fg-muted) l c h / 0.6);
+    --color-iua-fg-muted: color-mix(in oklch, var(--color-iua-fg-vivid) 60%, transparent);
+    --color-iua-fg-dim: color-mix(in oklch, var(--color-iua-fg-muted) 60%, transparent);
 
     --color-iua-fg-inverted-vivid: oklch(from var(--color-iua-fg-inverted-base) l c h);
-    --color-iua-fg-inverted-muted: oklch(from var(--color-iua-fg-inverted-vivid) l c h / 0.6);
-    --color-iua-fg-inverted-dim: oklch(from var(--color-iua-fg-inverted-muted) l c h / 0.6);
+    --color-iua-fg-inverted-muted: color-mix(in oklch, var(--color-iua-fg-inverted-vivid) 60%, transparent);
+    --color-iua-fg-inverted-dim: color-mix(in oklch, var(--color-iua-fg-inverted-muted) 60%, transparent);
 
     --color-iua-red-neg-1: oklch(from var(--color-iua-red-0) l c h / 0.6);
     --color-iua-red-0: oklch(from var(--color-iua-red-base) l c h);
@@ -96,13 +96,13 @@
 }
 
 :root[data-schema="ghostty"] {
-    --color-iua-bg-base: light-dark(oklch(0.8 0.01 250), oklch(0.2 0.01 250));
-    --color-iua-fg-base: light-dark(oklch(0.19 0.01 110), oklch(0.81 0.01 110));
-    --color-iua-fg-inverted-base: light-dark(oklch(0.81 0.01 110), oklch(0.19 0.01 110));
-    --color-iua-red-base: light-dark(oklch(0.38 0.14 25), oklch(0.62 0.14 25));
-    --color-iua-yellow-base: light-dark(oklch(0.16 0.11 85), oklch(0.84 0.11 85));
-    --color-iua-green-base: light-dark(oklch(0.24 0.12 110), oklch(0.76 0.12 110));
-    --color-iua-blue-base: light-dark(oklch(0.32 0.07 240), oklch(0.68 0.07 240));
+    --color-iua-bg-base: light-dark(oklch(calc(1 - 0.2921) 0.014 261.7), oklch(0.2921 0.014 261.7));
+    --color-iua-fg-base: light-dark(oklch(calc(1 - 0.937) 0 0), oklch(0.937 0 0));
+    --color-iua-fg-inverted-base: light-dark(oklch(0.937 0 0), oklch(calc(1 - 0.937) 0 0));
+    --color-iua-red-base: light-dark(oklch(calc(1 - 0.6308) 0.1298 21.44), oklch(0.6308 0.1298 21.44));
+    --color-iua-yellow-base: light-dark(oklch(calc(1 - 0.8452) 0.1093 112.8), oklch(0.8452 0.1111 83.5));
+    --color-iua-green-base: light-dark(oklch(calc(1 - 0.7741) 0.1093 112.8), oklch(0.7741 0.1093 112.8));
+    --color-iua-blue-base: light-dark(oklch(calc(1 - 0.6971) 0.054 243.29), oklch(0.6971 0.054 243.29));
 }
 
 /* IC Orange PPL - Warm orange terminal theme */
@@ -112,13 +112,13 @@
     --color-iua-fg-base: light-dark(oklch(0.25 0.06 60), oklch(0.85 0.08 70));
     --color-iua-fg-inverted-base: light-dark(oklch(0.85 0.08 70), oklch(0.25 0.06 60));
     /* red: #C13900 (burnt orange-red) */
-    --color-iua-red-base: light-dark(oklch(0.45 0.16 35), oklch(0.60 0.18 35));
+    --color-iua-red-base: light-dark(oklch(0.45 0.16 35), oklch(0.6 0.18 35));
     /* yellow: #CAAF00 (golden yellow) */
     --color-iua-yellow-base: light-dark(oklch(0.65 0.14 95), oklch(0.82 0.14 95));
     /* green: #A4A900 (olive green) */
-    --color-iua-green-base: light-dark(oklch(0.60 0.12 110), oklch(0.75 0.14 110));
+    --color-iua-green-base: light-dark(oklch(0.6 0.12 110), oklch(0.75 0.14 110));
     /* blue: #BD6D00 (amber/orange - no true blue in this palette) */
-    --color-iua-blue-base: light-dark(oklch(0.50 0.12 65), oklch(0.65 0.14 65));
+    --color-iua-blue-base: light-dark(oklch(0.5 0.12 65), oklch(0.65 0.14 65));
 }
 
 /* Rose Pine - All natural pine, faux fur and a bit of soho vibes */
@@ -128,13 +128,13 @@
     --color-iua-fg-base: light-dark(oklch(0.22 0.03 280), oklch(0.92 0.03 280));
     --color-iua-fg-inverted-base: light-dark(oklch(0.92 0.03 280), oklch(0.22 0.03 280));
     /* love: #eb6f92 (rose pink) */
-    --color-iua-red-base: light-dark(oklch(0.55 0.15 10), oklch(0.70 0.16 10));
+    --color-iua-red-base: light-dark(oklch(0.55 0.15 10), oklch(0.7 0.16 10));
     /* gold: #f6c177 (warm gold) */
-    --color-iua-yellow-base: light-dark(oklch(0.70 0.12 70), oklch(0.82 0.12 70));
+    --color-iua-yellow-base: light-dark(oklch(0.7 0.12 70), oklch(0.82 0.12 70));
     /* pine: #31748f (teal pine) */
-    --color-iua-green-base: light-dark(oklch(0.42 0.08 200), oklch(0.55 0.10 200));
+    --color-iua-green-base: light-dark(oklch(0.42 0.08 200), oklch(0.55 0.1 200));
     /* iris: #c4a7e7 (soft purple) */
-    --color-iua-blue-base: light-dark(oklch(0.60 0.12 300), oklch(0.75 0.12 300));
+    --color-iua-blue-base: light-dark(oklch(0.6 0.12 300), oklch(0.75 0.12 300));
 }
 
 /* Tokyo Night - Clean theme celebrating downtown Tokyo at night */
@@ -148,7 +148,7 @@
     /* yellow: #e0af68 (warm lantern) */
     --color-iua-yellow-base: light-dark(oklch(0.62 0.12 75), oklch(0.78 0.12 75));
     /* green: #73daca (neon cyan-green) */
-    --color-iua-green-base: light-dark(oklch(0.70 0.10 175), oklch(0.82 0.12 175));
+    --color-iua-green-base: light-dark(oklch(0.7 0.1 175), oklch(0.82 0.12 175));
     /* blue: #7aa2f7 (electric blue) */
     --color-iua-blue-base: light-dark(oklch(0.55 0.14 260), oklch(0.72 0.16 260));
 }
@@ -157,10 +157,10 @@
 :root[data-schema="gruvbox"] {
     /* bg: #282828 (dark), fg: #ebdbb2 (cream) */
     --color-iua-bg-base: light-dark(oklch(0.92 0.03 90), oklch(0.23 0.03 60));
-    --color-iua-fg-base: light-dark(oklch(0.28 0.05 60), oklch(0.90 0.05 90));
-    --color-iua-fg-inverted-base: light-dark(oklch(0.90 0.05 90), oklch(0.28 0.05 60));
+    --color-iua-fg-base: light-dark(oklch(0.28 0.05 60), oklch(0.9 0.05 90));
+    --color-iua-fg-inverted-base: light-dark(oklch(0.9 0.05 90), oklch(0.28 0.05 60));
     /* red: #cc241d / #fb4934 */
-    --color-iua-red-base: light-dark(oklch(0.48 0.18 25), oklch(0.65 0.20 25));
+    --color-iua-red-base: light-dark(oklch(0.48 0.18 25), oklch(0.65 0.2 25));
     /* yellow: #d79921 / #fabd2f */
     --color-iua-yellow-base: light-dark(oklch(0.62 0.14 80), oklch(0.82 0.14 85));
     /* green: #98971a / #b8bb26 */

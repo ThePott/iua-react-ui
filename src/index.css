@@ -57,6 +57,8 @@
     --color-iua-bg-0: oklch(from var(--color-iua-bg-base) l c h);
     --color-iua-bg-1: oklch(from var(--color-iua-bg-0) calc(l - 0.02) c h);
     --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.02) c h);
+    --color-iua-bg-3: oklch(from var(--color-iua-bg-2) calc(l - 0.02) c h);
+    --color-iua-bg-4: oklch(from var(--color-iua-bg-3) calc(l - 0.02) c h);
 
     --color-iua-fg-vivid: oklch(from var(--color-iua-fg-base) l c h);
     --color-iua-fg-muted: oklch(from var(--color-iua-fg-vivid) l c h / 0.6);

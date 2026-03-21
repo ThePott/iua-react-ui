@@ -7,7 +7,7 @@ const RoundBoxPage = () => {
         <PageContainer>
             <Title as="h1">RoundBox</Title>
             <Vstack>
-                <Title as="h1" isMuted>
+                <Title as="h2" isMuted>
                     bg
                 </Title>
                 <Hstack className="flex-wrap">
@@ -26,7 +26,7 @@ const RoundBoxPage = () => {
                 </Hstack>
             </Vstack>
             <Vstack>
-                <Title as="h1" isMuted>
+                <Title as="h2" isMuted>
                     colors
                 </Title>
                 <Hstack>
@@ -45,7 +45,7 @@ const RoundBoxPage = () => {
                 </Hstack>
             </Vstack>
             <Vstack>
-                <Title as="h1" isMuted>
+                <Title as="h2" isMuted>
                     borders
                 </Title>
                 <Hstack>
@@ -58,7 +58,7 @@ const RoundBoxPage = () => {
                 </Hstack>
             </Vstack>
             <Vstack>
-                <Title as="h1" isMuted>
+                <Title as="h2" isMuted>
                     shadowed
                 </Title>
                 <Hstack>

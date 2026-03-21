@@ -1,6 +1,6 @@
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
+import { tv } from "tailwind-variants/lite"
 import { bgVariants } from "@/package/shared/utils/styles"
 import { Hstack } from "../../layouts"
 import { Loader } from "../../pending/"
@@ -8,7 +8,8 @@ import { Loader } from "../../pending/"
 const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
 type ButtonColor = (typeof buttonColorArray)[number]
 
-const buttonVariants = cva("rounded-iua-sm my-transition", {
+const buttonVariants = tv({
+    base: "rounded-iua-sm my-transition",
     variants: {
         color: bgVariants,
         status: {
@@ -42,25 +43,25 @@ const buttonVariants = cva("rounded-iua-sm my-transition", {
         },
 
         // NOTE: background colors
-        { color: "bg0", status: "enabled", className: "hover:bg-bg-1 active:bg-bg-2" },
-        { color: "bg1", status: "enabled", className: "hover:bg-bg-2 active:bg-bg-3" },
-        { color: "bg2", status: "enabled", className: "hover:bg-bg-3 active:bg-washed-black" },
+        { color: "bg0", status: "enabled", className: "hover:bg-iua-bg-1 active:bg-iua-bg-2" },
+        { color: "bg1", status: "enabled", className: "hover:bg-iua-bg-2 active:bg-iua-bg-3" },
+        { color: "bg2", status: "enabled", className: "hover:bg-iua-bg-3 active:bg-iua-bg-4" },
 
         {
             color: "green",
             status: "enabled",
-            className: "hover:bg-washed-green-1 active:bg-washed-green-2",
+            className: "hover:bg-iua-green-1 active:bg-iua-green-2",
         },
-        { color: "green", status: "disabled", className: "bg-washed-green-neg-1" },
-        { color: "green", status: "pending", className: "bg-washed-green-neg-1" },
+        { color: "green", status: "disabled", className: "bg-iua-green-neg-1" },
+        { color: "green", status: "pending", className: "bg-iua-green-neg-1" },
 
         {
             color: "red",
             status: "enabled",
-            className: "bg-washed-red hover:bg-washed-red-1 active:bg-washed-red-2",
+            className: "bg-iua-red hover:bg-iua-red-1 active:bg-iua-red-2",
         },
-        { color: "red", status: "disabled", className: "bg-washed-red-neg-1" },
-        { color: "red", status: "pending", className: "bg-washed-red-neg-1" },
+        { color: "red", status: "disabled", className: "bg-iua-red-neg-1" },
+        { color: "red", status: "pending", className: "bg-iua-red-neg-1" },
 
         {
             border: "onHover",

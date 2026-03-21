@@ -1,15 +1,13 @@
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
 import { tv } from "tailwind-variants/lite"
+import type { Color } from "@/package/shared/types"
 import { bgVariants } from "@/package/shared/utils/styles"
 import { Hstack } from "../../layouts"
 import { Loader } from "../../pending/"
 
-const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const
-type ButtonColor = (typeof buttonColorArray)[number]
-
 const buttonVariants = tv({
-    base: "rounded-iua-sm my-transition",
+    base: "rounded-iua-sm iua-transition",
     variants: {
         color: bgVariants,
         status: {
@@ -35,33 +33,35 @@ const buttonVariants = tv({
     },
     compoundVariants: [
         // NOTE: text colors
-        { color: ["transparent"], className: "disabled:text-fg-muted" },
-        { color: ["bg0", "bg1", "bg2"], className: "text-fg-vivid disabled:text-fg-muted" },
         {
-            color: ["green", "red"],
+            color: ["bg0", "bg1", "bg2", "transparent"],
+            className: "disabled:text-fg-muted",
+        },
+        {
+            color: ["red", "yellow", "green", "blue"],
             className: "text-fg-inverted-vivid disabled:text-fg-inverted-muted",
         },
 
-        // NOTE: background colors
+        // NOTE: hover, active, disabled colors
         { color: "bg0", status: "enabled", className: "hover:bg-iua-bg-1 active:bg-iua-bg-2" },
         { color: "bg1", status: "enabled", className: "hover:bg-iua-bg-2 active:bg-iua-bg-3" },
         { color: "bg2", status: "enabled", className: "hover:bg-iua-bg-3 active:bg-iua-bg-4" },
-
-        {
-            color: "green",
-            status: "enabled",
-            className: "hover:bg-iua-green-1 active:bg-iua-green-2",
-        },
-        { color: "green", status: "disabled", className: "bg-iua-green-neg-1" },
-        { color: "green", status: "pending", className: "bg-iua-green-neg-1" },
-
         {
             color: "red",
-            status: "enabled",
-            className: "bg-iua-red hover:bg-iua-red-1 active:bg-iua-red-2",
+            className: "hover:bg-iua-red-1 active:bg-iua-red-2 disabled:bg-iua-red-neg-1",
         },
-        { color: "red", status: "disabled", className: "bg-iua-red-neg-1" },
-        { color: "red", status: "pending", className: "bg-iua-red-neg-1" },
+        {
+            color: "yellow",
+            className: "hover:bg-iua-yellow-1 active:bg-iua-yellow-2 disabled:bg-iua-yellow-neg-1",
+        },
+        {
+            color: "green",
+            className: "hover:bg-iua-green-1 active:bg-iua-green-2 disabled:bg-iua-green-neg-1",
+        },
+        {
+            color: "blue",
+            className: "hover:bg-iua-blue-1 active:bg-iua-blue-2 disabled:bg-iua-blue-neg-1",
+        },
 
         {
             border: "onHover",
@@ -78,7 +78,7 @@ const buttonVariants = tv({
 
 interface WithButtonProps<T extends ElementType = "button"> {
     as?: T
-    color?: ButtonColor
+    color?: Color
     status?: "enabled" | "disabled" | "pending"
     border?: "onHover" | "always" | "none"
     padding?: "wide" | "tight" | "normal" | "none"
@@ -86,8 +86,6 @@ interface WithButtonProps<T extends ElementType = "button"> {
     isOnLeft?: boolean
 }
 type ButtonProps<T extends ElementType> = WithButtonProps<T> & Omit<ComponentPropsWithRef<T>, keyof WithButtonProps<T>>
-
-const lightBgArray: ButtonColor[] = ["green", "red"]
 
 const Button = <T extends ElementType>({
     as,
@@ -101,7 +99,7 @@ const Button = <T extends ElementType>({
 }: ButtonProps<T>) => {
     const { className, children, ...rest } = props
 
-    const isLoaderDark = lightBgArray.includes(color)
+    const isBgDark = color.includes("bg") || color === "transparent"
 
     const Component: ElementType = as ?? "button"
     return (
@@ -111,7 +109,7 @@ const Button = <T extends ElementType>({
             className={clsx(buttonVariants({ color, status, padding, border, isShadowed }), className)}
         >
             <Hstack className={clsx("items-center", isOnLeft ? "text-left" : "justify-center")}>
-                {status === "pending" && <Loader isDark={isLoaderDark} />}
+                {status === "pending" && <Loader isDark={!isBgDark} />}
                 {children}
             </Hstack>
         </Component>

@@ -15,6 +15,15 @@ const ButtonPage = () => {
                     <Button color="bg2">bg-2</Button>
                 </Hstack>
             </Vstack>
+            <Vstack>
+                <Title as="h2">color</Title>
+                <Hstack>
+                    <Button color="red">bg-0</Button>
+                    <Button color="yellow">bg-1</Button>
+                    <Button color="green">bg-2</Button>
+                    <Button color="blue">bg-2</Button>
+                </Hstack>
+            </Vstack>
         </PageContainer>
     )
 }

@@ -162,3 +162,9 @@
     /* blue: #458588 / #83a598 */
     --color-iua-blue-base: light-dark(oklch(0.48 0.06 195), oklch(0.68 0.06 175));
 }
+
+@utility iua-transition {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.08, 0.34, 0.26, 1.11);
+    transition-duration: 0.1s;
+}

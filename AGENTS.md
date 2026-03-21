@@ -163,17 +163,7 @@ import styles from "./Foo.module.css" // Returns { className: "hashed" }
 
 ## question.md / answer.md
 
-When working with `question.md` and `answer.md`:
+When working with `qna/**/question_N.md` and `qna/**/answer_N.md`:
 
-- **Only edit `answer.md`** — never modify `question.md`
+- **Only edit `answer_N.md`** — never modify `question_N.md`
 - Read the question, then write your answer in the answer file
-
-## warn cost when build
-
-- every time when I request build agents to write code by yourself, warn me about the token cost. only write code when I
-  say to proceed. ask me everytime before you write code. you may ask multiple times in a single session
-
-### exception: when you are on following, write files without asking
-
-- `/init`
-- answering `question.md`

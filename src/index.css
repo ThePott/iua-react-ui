@@ -13,14 +13,6 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    --color-iua-bg-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-fg-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-fg-inverted-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-red-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-yellow-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-green-base: light-dark(oklch(0 0 0), oklch(0 0 0));
-    --color-iua-blue-base: light-dark(oklch(0 0 0), oklch(0 0 0));
 }
 
 @theme {
@@ -67,12 +59,12 @@
     --color-iua-bg-2: oklch(from var(--color-iua-bg-1) calc(l - 0.02) c h);
 
     --color-iua-fg-vivid: oklch(from var(--color-iua-fg-base) l c h);
-    --color-iua-fg-muted: color-mix(in oklch, var(--color-iua-fg-vivid) 60%, transparent);
-    --color-iua-fg-dim: color-mix(in oklch, var(--color-iua-fg-muted) 60%, transparent);
+    --color-iua-fg-muted: oklch(from var(--color-iua-fg-vivid) l c h / 0.6);
+    --color-iua-fg-dim: oklch(from var(--color-iua-fg-muted) l c h / calc(alpha * 0.6));
 
     --color-iua-fg-inverted-vivid: oklch(from var(--color-iua-fg-inverted-base) l c h);
-    --color-iua-fg-inverted-muted: color-mix(in oklch, var(--color-iua-fg-inverted-vivid) 60%, transparent);
-    --color-iua-fg-inverted-dim: color-mix(in oklch, var(--color-iua-fg-inverted-muted) 60%, transparent);
+    --color-iua-fg-inverted-muted: oklch(from var(--color-iua-fg-inverted-vivid) l c h / 0.6);
+    --color-iua-fg-inverted-dim: oklch(from var(--color-iua-fg-inverted-muted) l c h / calc(alpha * 0.6));
 
     --color-iua-red-neg-1: oklch(from var(--color-iua-red-0) l c h / 0.6);
     --color-iua-red-0: oklch(from var(--color-iua-red-base) l c h);

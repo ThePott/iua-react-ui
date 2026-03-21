@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, type ReactNode } from "react"
+import { RoundBox, Vstack } from "../../layouts"
 import { useSelectStore } from "./_selectStore"
-import { Vstack } from "@/components/layouts"
-import RoundBox from "@/components/layouts/RoundBox"
 
 const SelectContent = ({ children }: { children: ReactNode }) => {
     const isOpened = useSelectStore((state) => state.isOpened)
@@ -49,7 +48,7 @@ const SelectContent = ({ children }: { children: ReactNode }) => {
             ref={refCallback}
             style={floatingReturns?.floatingStyles}
             padding="md"
-            color="bg3"
+            color="bg2"
             isBordered
             isShadowed
             className="z-10 w-full"

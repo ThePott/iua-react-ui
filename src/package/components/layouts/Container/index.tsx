@@ -1,8 +1,7 @@
 import clsx from "clsx"
 import { tv } from "tailwind-variants/lite"
-
-import type { DivProps } from "@/shared/types"
-import { wideWidthVariants } from "@/shared/utils/styles"
+import type { DivProps } from "@/package/shared/types"
+import { wideWidthVariants } from "@/package/shared/utils/styles"
 
 const containerVariants = tv({
     base: "mx-auto",

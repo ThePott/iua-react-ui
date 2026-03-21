@@ -1,5 +1,5 @@
-import type { DivProps } from "@/shared/types"
 import clsx from "clsx"
+import type { DivProps } from "@/package/shared/types"
 
 const FullScreen = (props: DivProps) => {
     const { className, children, ...rest } = props

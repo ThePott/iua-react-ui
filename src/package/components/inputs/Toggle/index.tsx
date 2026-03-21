@@ -1,9 +1,8 @@
 import clsx from "clsx"
 import { motion } from "motion/react"
 import { useState, type ReactNode } from "react"
-
-import { Hstack } from "@/components/layouts"
-import { motionTransition } from "@/shared/utils/framerMotionAnimations"
+import { motionTransition } from "@/package/shared/utils/framerMotionAnimations"
+import { Hstack } from "../../layouts"
 
 type ToggleProps = {
     defaultIsOn?: boolean

@@ -1,12 +1,10 @@
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ReactNode } from "react"
-
-import { Input } from "@/components/inputs"
-import { Hstack, Vstack } from "@/components/layouts"
-import { ExpandableDiv } from "@/components/wrappers"
-import type { PProps, InputProps, DivProps } from "@/shared/types"
-
+import type { PProps, InputProps, DivProps } from "@/package/shared/types"
+import { Input } from "../../inputs"
+import { Hstack, Vstack } from "../../layouts"
+import { ExpandableDiv } from "../../wrappers"
 import LabeledContext from "./LabeledContext"
 import useLabeledContext from "./useLabeledContext"
 

@@ -1,8 +1,7 @@
 import clsx from "clsx"
 import { tv } from "tailwind-variants/lite"
-
-import type { SmToLg, None, XsToXl, DivProps, Color } from "@/shared/types"
-import { bgVariants, paddingVariants } from "@/shared/utils/styles"
+import type { SmToLg, None, XsToXl, DivProps, Color } from "@/package/shared/types"
+import { paddingVariants, bgVariants } from "@/package/shared/utils/styles"
 
 const roundBoxVariants = tv({
     variants: {

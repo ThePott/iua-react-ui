@@ -1,5 +1,5 @@
-import type { DivProps } from "@/shared/types"
 import clsx from "clsx"
+import type { DivProps } from "@/package/shared/types"
 
 const CenterContainer = (props: DivProps) => {
     const { children, className, ...rest } = props

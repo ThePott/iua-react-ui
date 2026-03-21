@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import { tv } from "tailwind-variants/lite"
-
-import type { HeadingProps } from "@/shared/types"
+import type { HeadingProps } from "@/package/shared/types"
 
 const titleVariants = tv({
     base: "font-semibold",

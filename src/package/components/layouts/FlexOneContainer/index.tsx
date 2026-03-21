@@ -1,6 +1,6 @@
-import type { DivProps } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import type { DivProps } from "@/package/shared/types"
 
 // NOTE: 여기에 [scrollbar-gutter:stable]하게 되면 겹겹이 FlexOneContainer를 쓸 때 거터가 중첩됨
 // NOTE: 예시: progress page

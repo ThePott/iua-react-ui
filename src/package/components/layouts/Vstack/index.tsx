@@ -1,8 +1,7 @@
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
-
-import type { DivProps, None, XsToXl } from "@/shared/types"
-import { gapVariants } from "@/shared/utils/styles"
+import type { XsToXl, None, DivProps } from "@/package/shared/types"
+import { gapVariants } from "@/package/shared/utils/styles"
 
 const vstackVariants = cva("flex flex-col", {
     variants: {

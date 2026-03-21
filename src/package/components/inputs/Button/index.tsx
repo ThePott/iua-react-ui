@@ -1,10 +1,8 @@
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import type { ComponentPropsWithRef, ElementType } from "react"
-
-import { Hstack } from "@/components/layouts"
-import { bgVariants } from "@/shared/utils/styles"
-
+import { bgVariants } from "@/package/shared/utils/styles"
+import { Hstack } from "../../layouts"
 import { Loader } from "../../pending/"
 
 const buttonColorArray = ["green", "bg0", "bg1", "bg2", "red", "transparent"] as const

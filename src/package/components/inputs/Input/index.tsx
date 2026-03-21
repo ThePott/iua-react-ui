@@ -1,9 +1,8 @@
 import clsx from "clsx"
 import type { JSX } from "react"
 import { tv } from "tailwind-variants/lite"
-
-import { Hstack } from "@/components/layouts"
-import type { InputProps } from "@/shared/types"
+import type { InputProps } from "@/package/shared/types"
+import { Hstack } from "../../layouts"
 
 const inputVariants = tv({
     base: "rounded-iua-sm iua-transition items-center outline",

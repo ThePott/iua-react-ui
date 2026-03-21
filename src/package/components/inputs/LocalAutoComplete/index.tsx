@@ -1,11 +1,11 @@
 import { flip, offset, shift, useFloating } from "@floating-ui/react"
 import { getRegExp } from "korean-regexp"
 import { useEffect } from "react"
+import type { ValueLabel } from "@/package/shared/types"
 import Input from "../Input"
 import LocalAutoCompleteContent from "./LocalAutoCompleteContent"
 import { LocalAutoCompleteStoreProvider } from "./LocalAutoCompleteStoreProvider"
 import useLocalAutoCompleteStore from "./useLocalAutoCompleteStore"
-import type { ValueLabel } from "@/shared/types"
 
 const LocalAutoCompleteWrapper = () => {
     const inputValue = useLocalAutoCompleteStore((state) => state.inputValue)

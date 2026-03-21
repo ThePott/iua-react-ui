@@ -1,8 +1,8 @@
-import { Hstack } from "@/components/layouts"
-import { makeTransition } from "@/shared/utils/animation"
 import clsx from "clsx"
 import { motion } from "motion/react"
 import { useState } from "react"
+import { makeTransition } from "@/package/shared/utils/animation"
+import { Hstack } from "../../layouts"
 
 const TabBackgroundPill = () => {
     return (

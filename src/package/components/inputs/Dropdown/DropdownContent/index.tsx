@@ -2,10 +2,8 @@ import { cva } from "class-variance-authority"
 import clsx from "clsx"
 import { type ReactNode } from "react"
 import { createPortal } from "react-dom"
-
-import useDetectOutsideClick from "@/shared/hooks/useDetectOutsideClick"
-import { narrowWidthVariants } from "@/shared/utils/styles"
-
+import useDetectOutsideClick from "@/package/shared/hooks/useDetectOutsideClick"
+import { narrowWidthVariants } from "@/package/shared/utils/styles"
 import useDropdownStore from "../useDropdownStore"
 
 const dropdownVariants = cva("", {

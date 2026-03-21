@@ -1,6 +1,6 @@
-import type { XsToXl } from "@/shared/types"
 import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import type { XsToXl } from "@/package/shared/types"
 import styles from "./index.module.css"
 
 type LoaderProps = {

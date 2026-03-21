@@ -70,23 +70,23 @@
 
     --color-iua-red-neg-1: oklch(from var(--color-iua-red-0) l c h / 0.6);
     --color-iua-red-0: oklch(from var(--color-iua-red-base) l c h);
-    --color-iua-red-1: oklch(from var(--color-iua-red-0) calc(l - 0.01) c h);
-    --color-iua-red-2: oklch(from var(--color-iua-red-1) calc(l - 0.01) c h);
+    --color-iua-red-1: oklch(from var(--color-iua-red-0) calc(l - 0.1) c h);
+    --color-iua-red-2: oklch(from var(--color-iua-red-1) calc(l - 0.1) c h);
 
     --color-iua-yellow-neg-1: oklch(from var(--color-iua-yellow-0) l c h / 0.6);
     --color-iua-yellow-0: oklch(from var(--color-iua-yellow-base) l c h);
-    --color-iua-yellow-1: oklch(from var(--color-iua-yellow-0) calc(l - 0.01) c h);
-    --color-iua-yellow-2: oklch(from var(--color-iua-yellow-1) calc(l - 0.01) c h);
+    --color-iua-yellow-1: oklch(from var(--color-iua-yellow-0) calc(l - 0.1) c h);
+    --color-iua-yellow-2: oklch(from var(--color-iua-yellow-1) calc(l - 0.1) c h);
 
     --color-iua-green-neg-1: oklch(from var(--color-iua-green-0) l c h / 0.6);
     --color-iua-green-0: oklch(from var(--color-iua-green-base) l c h);
-    --color-iua-green-1: oklch(from var(--color-iua-green-0) calc(l - 0.01) c h);
-    --color-iua-green-2: oklch(from var(--color-iua-green-1) calc(l - 0.01) c h);
+    --color-iua-green-1: oklch(from var(--color-iua-green-0) calc(l - 0.1) c h);
+    --color-iua-green-2: oklch(from var(--color-iua-green-1) calc(l - 0.1) c h);
 
     --color-iua-blue-neg-1: oklch(from var(--color-iua-blue-0) l c h / 0.6);
     --color-iua-blue-0: oklch(from var(--color-iua-blue-base) l c h);
-    --color-iua-blue-1: oklch(from var(--color-iua-blue-0) calc(l - 0.01) c h);
-    --color-iua-blue-2: oklch(from var(--color-iua-blue-1) calc(l - 0.01) c h);
+    --color-iua-blue-1: oklch(from var(--color-iua-blue-0) calc(l - 0.1) c h);
+    --color-iua-blue-2: oklch(from var(--color-iua-blue-1) calc(l - 0.1) c h);
 }
 
 :root[data-schema="ghostty"] {

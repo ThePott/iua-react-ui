@@ -42,7 +42,7 @@ const buttonVariants = tv({
             className: "text-fg-inverted-vivid disabled:text-fg-inverted-muted",
         },
 
-        // NOTE: hover, active, disabled colors
+        // NOTE: background colors
         { color: "bg0", status: "enabled", className: "hover:bg-iua-bg-1 active:bg-iua-bg-2" },
         { color: "bg1", status: "enabled", className: "hover:bg-iua-bg-2 active:bg-iua-bg-3" },
         { color: "bg2", status: "enabled", className: "hover:bg-iua-bg-3 active:bg-iua-bg-4" },

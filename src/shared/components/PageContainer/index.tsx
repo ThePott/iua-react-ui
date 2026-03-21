@@ -7,7 +7,7 @@ type PageContainerProps = {
 
 const PageContainer = ({ children }: PageContainerProps) => {
     return (
-        <Container isPadded>
+        <Container width="xl" isPadded>
             <RoundBox padding="xl" color="bg0" radius="lg" isShadowed>
                 <Vstack gap="lg">{children}</Vstack>
             </RoundBox>

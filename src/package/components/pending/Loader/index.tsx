@@ -1,7 +1,6 @@
-import { cva } from "class-variance-authority"
 import clsx from "clsx"
+import { tv } from "tailwind-variants/lite"
 import type { XsToXl } from "@/package/shared/types"
-import styles from "./index.module.css"
 
 type LoaderProps = {
     size?: XsToXl
@@ -9,7 +8,8 @@ type LoaderProps = {
 }
 
 // NOTE: 나중에는 font size가 아니라 button size에 맞춰야 할지도 모르겠다
-const loaderVariants = cva("", {
+const loaderVariants = tv({
+    base: "iua-loader shrink-0",
     variants: {
         size: {
             xs: "size-[12px] border-2",
@@ -26,7 +26,7 @@ const loaderVariants = cva("", {
 })
 
 const Loader = ({ size = "md", isDark }: LoaderProps) => {
-    return <div className={clsx(loaderVariants({ size, isDark }), styles.loader)} />
+    return <div className={clsx(loaderVariants({ size, isDark }))} />
 }
 
 export default Loader

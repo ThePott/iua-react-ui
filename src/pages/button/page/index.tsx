@@ -46,15 +46,55 @@ const ButtonPage = () => {
                 </Hstack>
             </Vstack>
             <Vstack>
-                <Title as="h2">color</Title>
+                <Title as="h2">disabled</Title>
                 <Hstack>
-                    <Button color="bg0">bg-0</Button>
-                    <Button color="bg1">bg-1</Button>
-                    <Button color="bg2">bg-2</Button>
-                    <Button color="red">red</Button>
-                    <Button color="yellow">yellow</Button>
-                    <Button color="green">green</Button>
-                    <Button color="blue">blue</Button>
+                    <Button status="disabled" color="bg0">
+                        bg-0
+                    </Button>
+                    <Button status="disabled" color="bg1">
+                        bg-1
+                    </Button>
+                    <Button status="disabled" color="bg2">
+                        bg-2
+                    </Button>
+                    <Button status="disabled" color="red">
+                        red
+                    </Button>
+                    <Button status="disabled" color="yellow">
+                        yellow
+                    </Button>
+                    <Button status="disabled" color="green">
+                        green
+                    </Button>
+                    <Button status="disabled" color="blue">
+                        blue
+                    </Button>
+                </Hstack>
+            </Vstack>
+            <Vstack>
+                <Title as="h2">is shadowed</Title>
+                <Hstack>
+                    <Button isShadowed color="bg0">
+                        bg-0
+                    </Button>
+                    <Button isShadowed color="bg1">
+                        bg-1
+                    </Button>
+                    <Button isShadowed color="bg2">
+                        bg-2
+                    </Button>
+                    <Button isShadowed color="red">
+                        red
+                    </Button>
+                    <Button isShadowed color="yellow">
+                        yellow
+                    </Button>
+                    <Button isShadowed color="green">
+                        green
+                    </Button>
+                    <Button isShadowed color="blue">
+                        blue
+                    </Button>
                 </Hstack>
             </Vstack>
         </PageContainer>

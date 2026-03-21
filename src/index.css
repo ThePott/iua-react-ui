@@ -168,3 +168,47 @@
     transition-timing-function: cubic-bezier(0.08, 0.34, 0.26, 1.11);
     transition-duration: 0.1s;
 }
+
+@utility iua-loader {
+    border-radius: 50%;
+    animation:
+        iua-loader-animation-first-cycle 0.8s infinite linear alternate,
+        iua-loader-animation-second-cycle 1.6s infinite linear;
+}
+@keyframes iua-loader-animation-first-cycle {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+    }
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+    }
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+    }
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+    }
+}
+@keyframes iua-loader-animation-second-cycle {
+    0% {
+        transform: scaleY(1) rotate(0deg);
+    }
+    49.99% {
+        transform: scaleY(1) rotate(135deg);
+    }
+    50% {
+        transform: scaleY(-1) rotate(0deg);
+    }
+    100% {
+        transform: scaleY(-1) rotate(-135deg);
+    }
+}

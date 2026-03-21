@@ -1,5 +1,7 @@
 {
     "$schema": "./node_modules/oxfmt/configuration_schema.json",
     "ignorePatterns": ["dist/**", "routeTree.gen.ts", "package.json", "package-lock.json", ".husky", "**/*.gen.ts"],
-    "sortImports": {}
+    "sortImports": {
+        "newlinesBetween": false
+    }
 }

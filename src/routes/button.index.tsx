@@ -1,9 +1,7 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router"
 
-export const Route = createFileRoute('/button/')({
-  component: RouteComponent,
+import ButtonPage from "@/pages/button/page"
+
+export const Route = createFileRoute("/button/")({
+    component: ButtonPage,
 })
-
-function RouteComponent() {
-  return <div>Hello "/button/"!</div>
-}

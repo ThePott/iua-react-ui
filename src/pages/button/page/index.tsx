@@ -97,6 +97,21 @@ const ButtonPage = () => {
                     </Button>
                 </Hstack>
             </Vstack>
+            <Vstack>
+                <Title as="h2">is on left</Title>
+                <Button isOnLeft border="always">
+                    is on left
+                </Button>
+                <Button border="always">not is on left</Button>
+            </Vstack>
+            <Vstack>
+                <Title as="h2">border</Title>
+                <Hstack>
+                    <Button border="none">none</Button>
+                    <Button border="onHover">on hover</Button>
+                    <Button border="always">always</Button>
+                </Hstack>
+            </Vstack>
         </PageContainer>
     )
 }

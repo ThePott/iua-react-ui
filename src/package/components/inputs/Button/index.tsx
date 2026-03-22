@@ -66,12 +66,12 @@ const buttonVariants = tv({
         {
             border: "onHover",
             status: "enabled",
-            className: "border border-transparent hover:border-border-muted",
+            className: "border border-transparent hover:border-iua-fg-muted",
         },
         {
             border: "always",
             status: "enabled",
-            className: "border border-border-dim hover:border-border-muted",
+            className: "border border-iua-fg-dim hover:border-iua-fg-muted",
         },
     ],
 })

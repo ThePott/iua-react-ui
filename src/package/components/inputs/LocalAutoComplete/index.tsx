@@ -29,7 +29,9 @@ const WrappedLocalAutoComplete = () => {
     useEffect(() => {
         if (!defaultValue) return
         if (inputValue) return
-        setInputValue(defaultValue)
+        const defaultOption = optionArray.find((option) => option.value === defaultValue)
+        if (!defaultOption) return
+        setInputValue(defaultOption.label)
     }, [defaultValue])
 
     const refCallback = (node: HTMLInputElement | null) => {

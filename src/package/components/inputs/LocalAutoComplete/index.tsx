@@ -16,6 +16,7 @@ const WrappedLocalAutoComplete = () => {
     const setFloatingReturns = useLocalAutoCompleteStore((state) => state.setFloatingReturns)
     const defaultValue = useLocalAutoCompleteStore((state) => state.defaultValue)
     const disabled = useLocalAutoCompleteStore((state) => state.disabled)
+    const isRed = useLocalAutoCompleteStore((state) => state.isRed)
 
     const floatingReturns = useFloating({
         middleware: [flip(), shift(), offset(4)],
@@ -57,6 +58,7 @@ const WrappedLocalAutoComplete = () => {
         <div className="relative grow">
             <Input
                 ref={refCallback}
+                isRed={isRed}
                 value={inputValue}
                 onChange={handleChange}
                 onFocus={() => setIsContentOn(true)}
@@ -70,9 +72,9 @@ const WrappedLocalAutoComplete = () => {
 }
 
 export type LocalAutoCompletePassedProps = {
-    placeholder: string
+    placeholder?: string
     optionArray: ValueLabel[]
-    isRed: boolean
+    isRed?: boolean
     onChange: (inputValue: string) => void
     defaultValue?: string
     disabled?: boolean

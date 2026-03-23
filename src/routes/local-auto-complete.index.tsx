@@ -1,9 +1,6 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router"
+import LocalAutoCompletePage from "@/pages/local-auto-complete/page"
 
-export const Route = createFileRoute('/local-auto-complete/')({
-  component: RouteComponent,
+export const Route = createFileRoute("/local-auto-complete/")({
+    component: LocalAutoCompletePage,
 })
-
-function RouteComponent() {
-  return <div>Hello "/local-auto-complete/"!</div>
-}

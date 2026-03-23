@@ -39,7 +39,7 @@ const buttonVariants = tv({
         },
         {
             color: ["red", "yellow", "green", "blue"],
-            className: "text-fg-inverted-vivid disabled:text-fg-inverted-muted",
+            className: "text-iua-fg-inverted-vivid disabled:text-iua-fg-inverted-muted",
         },
 
         // NOTE: background colors

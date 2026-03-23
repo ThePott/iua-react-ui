@@ -9,7 +9,7 @@ const ButtonPage = () => {
             <Title as="h1">Button</Title>
             <Vstack>
                 <Title as="h2">color</Title>
-                <Hstack>
+                <Hstack className="flex-wrap">
                     <Button color="bg0">bg-0</Button>
                     <Button color="bg1">bg-1</Button>
                     <Button color="bg2">bg-2</Button>
@@ -21,7 +21,7 @@ const ButtonPage = () => {
             </Vstack>
             <Vstack>
                 <Title as="h2">status: pending</Title>
-                <Hstack>
+                <Hstack className="flex-wrap">
                     <Button status="pending" color="bg0">
                         bg-0
                     </Button>
@@ -47,7 +47,7 @@ const ButtonPage = () => {
             </Vstack>
             <Vstack>
                 <Title as="h2">disabled</Title>
-                <Hstack>
+                <Hstack className="flex-wrap">
                     <Button status="disabled" color="bg0">
                         bg-0
                     </Button>
@@ -73,7 +73,7 @@ const ButtonPage = () => {
             </Vstack>
             <Vstack>
                 <Title as="h2">is shadowed</Title>
-                <Hstack>
+                <Hstack className="flex-wrap">
                     <Button isShadowed color="bg0">
                         bg-0
                     </Button>
@@ -98,19 +98,36 @@ const ButtonPage = () => {
                 </Hstack>
             </Vstack>
             <Vstack>
+                <Title as="h2">border</Title>
+                <Hstack className="flex-wrap">
+                    <Button border="none">none</Button>
+                    <Button border="onHover">on hover</Button>
+                    <Button border="always">always</Button>
+                </Hstack>
+            </Vstack>
+            <Vstack>
+                <Title as="h2">padding</Title>
+                <Vstack className="items-start">
+                    <Button border="always" padding="none">
+                        none
+                    </Button>
+                    <Button border="always" padding="tight">
+                        tight
+                    </Button>
+                    <Button border="always" padding="normal">
+                        normal
+                    </Button>
+                    <Button border="always" padding="wide">
+                        wide
+                    </Button>
+                </Vstack>
+            </Vstack>
+            <Vstack>
                 <Title as="h2">is on left</Title>
                 <Button isOnLeft border="always">
                     is on left
                 </Button>
                 <Button border="always">not is on left</Button>
-            </Vstack>
-            <Vstack>
-                <Title as="h2">border</Title>
-                <Hstack>
-                    <Button border="none">none</Button>
-                    <Button border="onHover">on hover</Button>
-                    <Button border="always">always</Button>
-                </Hstack>
             </Vstack>
         </PageContainer>
     )

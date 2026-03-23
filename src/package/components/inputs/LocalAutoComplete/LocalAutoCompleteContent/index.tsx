@@ -7,7 +7,7 @@ import useDetectOutsideClick from "@/package/shared/hooks/useDetectOutsideClick"
 import useGlobalStore from "@/package/shared/store/globalStore"
 import type { ValueLabel } from "@/package/shared/types"
 import Button from "../../Button"
-import useLocalAutoCompleteStore from "../useLocalAutoCompleteStore"
+import { useLocalAutoCompleteStore } from "../localAutoCompleteStore"
 
 type LocalAutoCompleteOptionProps = {
     option: ValueLabel
@@ -69,9 +69,9 @@ const LocalAutoCompleteContent = () => {
             <RoundBox
                 ref={refCallback}
                 style={floatingReturns?.floatingStyles}
-                color="bg3"
+                color="bg2"
                 padding="md"
-                className={clsx("max-h-[200px] overflow-y-auto z-100", isWidthMatching && "w-full")}
+                className={clsx("max-h-50 overflow-y-auto z-100", isWidthMatching && "w-full")}
                 isBordered
             >
                 <Vstack gap="none">

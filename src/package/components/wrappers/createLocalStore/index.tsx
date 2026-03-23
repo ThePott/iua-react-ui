@@ -2,7 +2,7 @@ import { createContext, useContext, useState, type ReactNode } from "react"
 import { createStore, useStore, type StateCreator, type StoreApi } from "zustand"
 
 const createLocalStore = <TPassedProps, TDefaultProps>(
-    defaultInitializer: StateCreator<TDefaultProps, [], [], TDefaultProps>
+    defaultInitializer: StateCreator<TDefaultProps & TPassedProps, [], [], TDefaultProps>,
 ) => {
     const LocalStoreContext = createContext<StoreApi<TPassedProps & TDefaultProps> | null>(null)
 

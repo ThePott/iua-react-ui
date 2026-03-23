@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { getRegExp } from "korean-regexp"
-import { useEffect, type ReactNode } from "react"
+import { useEffect, useRef, type ReactNode } from "react"
 import { createPortal } from "react-dom"
 import { RoundBox, Vstack } from "@/package/components/layouts"
 import useDetectOutsideClick from "@/package/shared/hooks/useDetectOutsideClick"
@@ -37,19 +37,13 @@ const Portal = ({ isEnabled, children }: PortalProps) => {
 
 const LocalAutoCompleteContent = () => {
     const setIsBodyScrollable = useGlobalStore((state) => state.setIsBodyScrollable)
-    const inputRef = useLocalAutoCompleteStore((state) => state.inputRef)
     const inputValue = useLocalAutoCompleteStore((state) => state.inputValue)
     const optionArray = useLocalAutoCompleteStore((state) => state.optionArray)
     const isContentOn = useLocalAutoCompleteStore((state) => state.isContentOn)
-    const setIsContentOn = useLocalAutoCompleteStore((state) => state.setIsContentOn)
     const floatingReturns = useLocalAutoCompleteStore((state) => state.floatingReturns)
     const isWidthMatching = useLocalAutoCompleteStore((state) => state.isWidthMatching)
+    const contentRef = useRef<HTMLDivElement>(null)
 
-    const { contentRef } = useDetectOutsideClick({
-        triggerRef: inputRef,
-        isOn: isContentOn,
-        onOutsideClick: () => setIsContentOn(false),
-    })
     const refCallback = (node: HTMLDivElement | null) => {
         contentRef.current = node
         floatingReturns?.refs.setFloating(node)

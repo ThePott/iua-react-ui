@@ -5,11 +5,11 @@ import type { InputProps } from "@/package/shared/types"
 import { Hstack } from "../../layouts"
 
 const inputVariants = tv({
-    base: "rounded-iua-sm iua-transition items-center outline",
+    base: "rounded-iua-sm iua-transition items-center outline ",
     variants: {
         isRed: {
-            false: "focus-within:outline-border-muted outline-transparent",
-            true: "focus-within:outline-washed-red focus-within:outline-2 outline-washed-red",
+            false: "focus-within:outline-iua-fg-muted outline-transparent",
+            true: "focus-within:outline-2 outline-iua-red-0",
         },
         variant: {
             contained: "bg-bg-2 shadow-inward-iua-sm",
@@ -48,7 +48,10 @@ const Input = ({
 
     return (
         <Hstack style={style} className={clsx(inputVariants({ isRed, variant, colorChangeIn }), className)}>
-            <input {...rest} className="w-full border-0 px-3 py-2 outline-0" />
+            <input
+                {...rest}
+                className="w-full border-0 px-3 py-2 outline-0 placeholder:text-iua-fg-muted disabled:text-iua-fg-dim disabled:placeholder:text-iua-fg-dim"
+            />
             {trailingIcon}
         </Hstack>
     )
